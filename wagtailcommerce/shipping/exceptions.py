@@ -1,0 +1,2 @@
+class ShippingCostCalculationException(Exception):
+    pass

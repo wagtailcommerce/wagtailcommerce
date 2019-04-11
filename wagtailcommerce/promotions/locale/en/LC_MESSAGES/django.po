@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:30
+msgid "Discount on order total"
+msgstr ""
+
+#: models.py:40
+msgid "Fixed amount"
+msgstr ""
+
+#: models.py:41
+msgid "Percentage"
+msgstr ""
+
+#: models.py:45
+msgid "name"
+msgstr ""
+
+#: models.py:46
+msgid "code"
+msgstr ""
+
+#: models.py:48
+msgid "coupon type"
+msgstr ""
+
+#: models.py:49
+msgid "coupon mode"
+msgstr ""
+
+#: models.py:50
+msgid "coupon amount"
+msgstr ""
+
+#: models.py:52
+msgid "usage limit"
+msgstr ""
+
+#: models.py:53
+msgid "times added to cart"
+msgstr ""
+
+#: models.py:54
+msgid "times used"
+msgstr ""
+
+#: models.py:56
+msgid "auto assign to new users"
+msgstr ""
+
+#: models.py:58
+msgid "active"
+msgstr ""
+
+#: models.py:60
+msgid "valid from"
+msgstr ""
+
+#: models.py:61
+msgid "valid until"
+msgstr ""
+
+#: models.py:63
+msgid "auto generated"
+msgstr ""
+
+#: models.py:65
+msgid "created on"
+msgstr ""
+
+#: models.py:66
+msgid "modified on"
+msgstr ""
+
+#: models.py:74
+msgid "basic information"
+msgstr ""
+
+#: models.py:87
+msgid "characteristics"
+msgstr ""
+
+#: models.py:92
+msgid "validity"
+msgstr ""
+
+#: models.py:103
+msgid "No spaces allowed in coupon code"
+msgstr ""
+
+#: models.py:121
+msgid "Enter a value greater than 0 or leave this field empty."
+msgstr ""
+
+#: models.py:124
+msgid "coupon"
+msgstr ""
+
+#: models.py:125
+msgid "coupons"
+msgstr ""

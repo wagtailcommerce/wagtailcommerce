@@ -1,0 +1,304 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:30
+msgid "Payment pending"
+msgstr ""
+
+#: models.py:31
+msgid "Awaiting payment confirmation"
+msgstr ""
+
+#: models.py:32
+msgid "Awaiting payment authorization"
+msgstr ""
+
+#: models.py:33
+msgid "Paid"
+msgstr ""
+
+#: models.py:34
+msgid "Shipment generated"
+msgstr ""
+
+#: models.py:35
+msgid "Shipped"
+msgstr ""
+
+#: models.py:36
+msgid "Delivered"
+msgstr ""
+
+#: models.py:37
+msgid "Cancelled"
+msgstr ""
+
+#: models.py:40
+msgid "identifier"
+msgstr ""
+
+#: models.py:42
+msgid "status"
+msgstr ""
+
+#: models.py:45
+msgid "cart"
+msgstr ""
+
+#: models.py:47
+msgid "store"
+msgstr ""
+
+#: models.py:48
+msgid "user"
+msgstr ""
+
+#: models.py:53
+msgid "product sub total"
+msgstr ""
+
+#: models.py:54
+msgid "product discount"
+msgstr ""
+
+#: models.py:55
+msgid "product tax"
+msgstr ""
+
+#: models.py:56
+msgid "shipping cost"
+msgstr ""
+
+#: models.py:57
+msgid "shipping cost discount"
+msgstr ""
+
+#: models.py:58
+msgid "shipping cost total"
+msgstr ""
+
+#: models.py:59
+msgid "order total"
+msgstr ""
+
+#: models.py:60
+msgid "order total (inc. tax)"
+msgstr ""
+
+#: models.py:66
+msgid "coupon"
+msgstr ""
+
+#: models.py:67
+msgid "coupon type"
+msgstr ""
+
+#: models.py:68
+msgid "coupon mode"
+msgstr ""
+
+#: models.py:69
+msgid "coupon amount"
+msgstr ""
+
+#: models.py:70
+msgid "coupon code"
+msgstr ""
+
+#: models.py:72
+msgid "date placed"
+msgstr ""
+
+#: models.py:73
+msgid "date paid"
+msgstr ""
+
+#: models.py:79
+msgid "Identifier"
+msgstr ""
+
+#: models.py:80
+msgid "Status"
+msgstr ""
+
+#: models.py:82
+msgid "Order details"
+msgstr ""
+
+#: models.py:85
+msgid "Coupon code"
+msgstr ""
+
+#: models.py:88
+msgid "Coupon type"
+msgstr ""
+
+#: models.py:89
+msgid "Coupon mode"
+msgstr ""
+
+#: models.py:90
+msgid "Coupon amount"
+msgstr ""
+
+#: models.py:92
+msgid "Discount"
+msgstr ""
+
+#: models.py:95
+msgid "Shipping cost"
+msgstr ""
+
+#: models.py:96
+msgid "Shipping cost discount"
+msgstr ""
+
+#: models.py:97
+msgid "Shipping cost total"
+msgstr ""
+
+#: models.py:100 models.py:204
+msgid "Subtotal"
+msgstr ""
+
+#: models.py:101
+msgid "Product discount"
+msgstr ""
+
+#: models.py:102
+msgid "Product tax"
+msgstr ""
+
+#: models.py:105
+msgid "Total"
+msgstr ""
+
+#: models.py:107
+msgid "Totals"
+msgstr ""
+
+#: models.py:108
+msgid "Basic info"
+msgstr ""
+
+#: models.py:111
+msgid "Products"
+msgstr ""
+
+#: models.py:114
+msgid "Shipments"
+msgstr ""
+
+#: models.py:162
+msgid "order"
+msgstr ""
+
+#: models.py:163
+msgid "orders"
+msgstr ""
+
+#: models.py:169 models.py:194
+msgid "SKU"
+msgstr ""
+
+#: models.py:170
+msgid "product thumbnail"
+msgstr ""
+
+#: models.py:173
+msgid "quantity"
+msgstr ""
+
+#: models.py:174
+msgid "item price"
+msgstr ""
+
+#: models.py:175
+msgid "item discount"
+msgstr ""
+
+#: models.py:176
+msgid "item price with discount"
+msgstr ""
+
+#: models.py:177
+msgid "total"
+msgstr ""
+
+#: models.py:180
+msgid "product name"
+msgstr ""
+
+#: models.py:181
+msgid "product variant description"
+msgstr ""
+
+#: models.py:184
+msgid "weight"
+msgstr ""
+
+#: models.py:184
+msgid "value stored in grams"
+msgstr ""
+
+#: models.py:185
+msgid "width"
+msgstr ""
+
+#: models.py:185 models.py:186 models.py:187
+msgid "value stored in millimeters"
+msgstr ""
+
+#: models.py:186
+msgid "height"
+msgstr ""
+
+#: models.py:187
+msgid "depth"
+msgstr ""
+
+#: models.py:195
+msgid "Variant"
+msgstr ""
+
+#: models.py:198 models.py:202
+msgid "Quantity"
+msgstr ""
+
+#: models.py:199
+msgid "Item price"
+msgstr ""
+
+#: models.py:203
+msgid "Item discount"
+msgstr ""
+
+#: models.py:240
+msgid "order line"
+msgstr ""
+
+#: models.py:241
+msgid "order lines"
+msgstr ""
+
+#: mutations.py:47
+msgid ""
+"The coupon \"{}\" you were currently using is no longer valid. It may have "
+"expired or reached its maximum uses."
+msgstr ""

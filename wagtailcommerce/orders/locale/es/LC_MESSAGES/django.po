@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Rafael Ponieman <rafa@wearetheplus.com>, 2018\n"
+"Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
+"teams/84515/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Payment pending"
+msgstr "Pendiente de pago"
+
+msgid "Awaiting payment confirmation"
+msgstr "Esperando confirmación de pago"
+
+msgid "Awaiting payment authorization"
+msgstr "Esperando autorización de pago"
+
+msgid "Paid"
+msgstr "Pago"
+
+msgid "Shipment generated"
+msgstr "Envío generado"
+
+msgid "Shipped"
+msgstr "Enviado"
+
+msgid "Delivered"
+msgstr "Entregado"
+
+msgid "Cancelled"
+msgstr "Cancelado"
+
+msgid "identifier"
+msgstr "identificador"
+
+msgid "status"
+msgstr "estado"
+
+msgid "cart"
+msgstr "carrito"
+
+msgid "store"
+msgstr "tienda"
+
+msgid "user"
+msgstr "usuario"
+
+msgid "product sub total"
+msgstr "sub-total de productos"
+
+msgid "product discount"
+msgstr "descuento de productos"
+
+msgid "product tax"
+msgstr "impuestos de productos"
+
+msgid "shipping cost"
+msgstr "costo de envío"
+
+msgid "shipping cost discount"
+msgstr "descuento de costo de envío"
+
+msgid "shipping cost total"
+msgstr "costo de envío total"
+
+msgid "order total"
+msgstr "total del pedido"
+
+msgid "order total (inc. tax)"
+msgstr "total del pedido (incluyendo impuestos)"
+
+msgid "coupon"
+msgstr "cupón"
+
+msgid "coupon type"
+msgstr "tipo de cupón"
+
+msgid "coupon mode"
+msgstr "modalidad de cupón"
+
+msgid "coupon amount"
+msgstr "monto de cupón"
+
+msgid "coupon code"
+msgstr "código de cupón"
+
+msgid "date placed"
+msgstr "fecha de pedido"
+
+msgid "date paid"
+msgstr "fecha de pago"
+
+msgid "Identifier"
+msgstr "Identificador"
+
+msgid "Status"
+msgstr "Estado"
+
+msgid "Order details"
+msgstr "Detalles del pedido"
+
+msgid "Coupon code"
+msgstr "Código de cupón"
+
+msgid "Coupon type"
+msgstr "Tipo de cupón"
+
+msgid "Coupon mode"
+msgstr "Modo de cupón"
+
+msgid "Coupon amount"
+msgstr "Monto de cupón"
+
+msgid "Discount"
+msgstr "Descuento"
+
+msgid "Shipping cost"
+msgstr "Costo de envío"
+
+msgid "Shipping cost discount"
+msgstr "Descuento sobre costo de envío"
+
+msgid "Shipping cost total"
+msgstr "Costo de envío total"
+
+msgid "Subtotal"
+msgstr "Subtotal"
+
+msgid "Product discount"
+msgstr "Descuento de productos"
+
+msgid "Product tax"
+msgstr "Impuestos sobre productos"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Totals"
+msgstr "Totales"
+
+msgid "Basic info"
+msgstr "Información básica"
+
+msgid "Products"
+msgstr "Productos"
+
+msgid "Shipments"
+msgstr "Envíos"
+
+msgid "order"
+msgstr "pedido"
+
+msgid "orders"
+msgstr "pedidos"
+
+msgid "SKU"
+msgstr "SKU"
+
+msgid "product thumbnail"
+msgstr "miniatura del producto"
+
+msgid "quantity"
+msgstr "cantidad"
+
+msgid "item price"
+msgstr "precio del ítem"
+
+msgid "item discount"
+msgstr "descuento del ítem"
+
+msgid "item price with discount"
+msgstr "precio del ítem con descuento"
+
+msgid "total"
+msgstr "total"
+
+msgid "product name"
+msgstr "nombre del producto"
+
+msgid "product variant description"
+msgstr "descripción de variante de producto"
+
+msgid "weight"
+msgstr "peso"
+
+msgid "value stored in grams"
+msgstr "valores almacenados en gramos"
+
+msgid "width"
+msgstr "ancho"
+
+msgid "value stored in millimeters"
+msgstr "valores almacenados en milímetros"
+
+msgid "height"
+msgstr "altura"
+
+msgid "depth"
+msgstr "profundidad"
+
+msgid "Variant"
+msgstr "Variante"
+
+msgid "Quantity"
+msgstr "Cantidad"
+
+msgid "Item price"
+msgstr "Precio de ítem"
+
+msgid "Item discount"
+msgstr "Descuento del ítem"
+
+msgid "order line"
+msgstr "línea del pedido"
+
+msgid "order lines"
+msgstr "líneas del pedido"
+
+msgid ""
+"The coupon \"{}\" you were currently using is no longer valid. It may have "
+"expired or reached its maximum uses."
+msgstr ""
+"El cupón \"{}\" que estabas utilizando ya no es válido. Puede haber expirado "
+"o llegado a la máxima cantidad de usos."

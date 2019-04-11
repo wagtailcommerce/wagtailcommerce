@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Rafael Ponieman <rafa@wearetheplus.com>, 2018\n"
+"Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
+"teams/84515/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "name"
+msgstr "nombre"
+
+msgid "slug"
+msgstr "marquilla"
+
+msgid "description"
+msgstr "descripción"
+
+msgid "category"
+msgstr "categoría"
+
+msgid "categories"
+msgstr "categorías"
+
+msgid ""
+"The name of the product as it will appear in URLs e.g http://domain.com/"
+"store/[product-slug]/"
+msgstr ""
+"El nombre del producto como aparecería en las URLs. Ej. http://dominio.com/"
+"tienda/[marquilla-del-producto]/"
+
+msgid "single price"
+msgstr "precio único"
+
+msgid "same price for all variants"
+msgstr "mismo precio para todas las variantes"
+
+msgid "price"
+msgstr "precio"
+
+msgid "identifier"
+msgstr "identificador"
+
+msgid "active"
+msgstr "activo"
+
+msgid "purchasing enabled"
+msgstr "compra habilitada"
+
+msgid "presale"
+msgstr "preventa"
+
+msgid "preview enabled"
+msgstr "previsualización habilitada"
+
+msgid "available on"
+msgstr "disponible desde"
+
+msgid "featured"
+msgstr "destacado"
+
+msgid "content type"
+msgstr "tipo de contenido"
+
+msgid "created on"
+msgstr "creado"
+
+msgid "modified on"
+msgstr "modificado"
+
+msgid "Your child Product model must implement the url() method"
+msgstr "Tu modelo de producto hijo debe implementar el método url()"
+
+msgid "images"
+msgstr "imágenes"
+
+msgid "image set"
+msgstr "set de imágenes"
+
+msgid "image sets"
+msgstr "sets de imágenes"
+
+msgid "image"
+msgstr "imagen"
+
+msgid "SKU"
+msgstr "SKU"
+
+msgid "weight"
+msgstr "peso"
+
+msgid "value stored in grams"
+msgstr "valor definido en gramos"
+
+msgid "width"
+msgstr "ancho"
+
+msgid "value stored in millimeters"
+msgstr "valor definido en milímetros"
+
+msgid "height"
+msgstr "altura"
+
+msgid "depth"
+msgstr "profundidad"
+
+msgid "stock"
+msgstr "stock"

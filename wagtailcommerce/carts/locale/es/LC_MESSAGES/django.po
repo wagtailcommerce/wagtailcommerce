@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Rafael Ponieman <rafa@wearetheplus.com>, 2018\n"
+"Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
+"teams/84515/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "Cart status"
+msgid "Open"
+msgstr "Abierto"
+
+msgctxt "Cart status"
+msgid "Replaced"
+msgstr "Reemplazado"
+
+msgctxt "Cart status"
+msgid "Awaiting payment"
+msgstr "Esperando pago"
+
+msgctxt "Cart status"
+msgid "Paid"
+msgstr "Pago"
+
+msgctxt "Cart status"
+msgid "Canceled"
+msgstr "Cancelado"
+
+msgid "user"
+msgstr "usuario"
+
+msgid "status"
+msgstr "estado"
+
+msgid "token"
+msgstr "token"
+
+msgid "updated on"
+msgstr "actualizado"
+
+msgid "created on"
+msgstr "creado"
+
+msgid "cart"
+msgstr "carrito"
+
+msgid "carts"
+msgstr "carritos"
+
+msgid "product"
+msgstr "producto"
+
+msgid "quantity"
+msgstr "cantidad"
+
+msgid "cart line"
+msgstr "línea del carrito"
+
+msgid "cart lines"
+msgstr "líneas del carrito"
+
+msgid "Product variant not found"
+msgstr "Variante de producto no encontrada"
+
+msgid "No more products available for the selected size"
+msgstr "No hay más unidades disponibles para el talle seleccionado"
+
+msgid "Address not found"
+msgstr "Dirección no encontrada"

@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Rafael Ponieman <rafa@wearetheplus.com>, 2018\n"
+"Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
+"teams/84515/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "name"
+msgstr "nombre"
+
+msgid "code"
+msgstr "código"
+
+msgid "ISO 4217 3 letter code"
+msgstr "Código ISO 4217 de 3 letras"
+
+msgid "symbol"
+msgstr "símbolo"
+
+msgid "As displayed on frontend"
+msgstr "Como se muestra en web"
+
+msgid "currency"
+msgstr "moneda"
+
+msgid "currencies"
+msgstr "monedas"
+
+msgid "checkout enabled"
+msgstr "compra habilitada"
+
+msgid "tax rate (percentage)"
+msgstr "tasa de impuesto (porcentaje)"
+
+msgid "store"
+msgstr "tienda"
+
+msgid "stores"
+msgstr "tiendas"

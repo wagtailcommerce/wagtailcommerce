@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Rafael Ponieman <rafa@wearetheplus.com>, 2018\n"
+"Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
+"teams/84515/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Deleted"
+msgstr "Eliminada"
+
+msgid "Created"
+msgstr "Creada"
+
+msgid "Modified"
+msgstr "Modificada"
+
+msgid "Default shipping address"
+msgstr "Dirección de envío predeterminada"
+
+msgid "Default billing address"
+msgstr "Dirección de facturación predeterminada"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Last name"
+msgstr "Apellido"
+
+msgid "Address (line 1)"
+msgstr "Dirección (línea 1)"
+
+msgid "Address (line 2)"
+msgstr "Dirección (línea 2)"
+
+msgid "Street number"
+msgstr "Número"
+
+msgid "Floor"
+msgstr "Piso"
+
+msgid "Apartment number"
+msgstr "Número de apartamento"
+
+msgid "City / Town"
+msgstr "Ciudad / Pueblo"
+
+msgid "District / Neighborhood"
+msgstr "Distrito / Barrio"
+
+msgid "State / Province / Region"
+msgstr "Estado / Provincia / Región"
+
+msgid "Country"
+msgstr "País"
+
+msgid "Postal code"
+msgstr "Código postal"
+
+msgid "Phone number"
+msgstr "Número telefónico"
+
+msgid "Security access code"
+msgstr "Código de acceso"
+
+msgid "Address"
+msgstr "Dirección"
+
+msgid "Addresses"
+msgstr "Direcciones"
+
+msgid "Error while deleting address. Please reload the page and try again."
+msgstr ""
+"Error al borrar la dirección. Por favor recarga la página e intenta "
+"nuevamente."
+
+msgid "Error while editing address. Please reload the page and try again."
+msgstr ""
+"Error al editar la dirección. Por favor recarga la página e intenta "
+"nuevamente."

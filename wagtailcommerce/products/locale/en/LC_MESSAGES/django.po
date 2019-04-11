@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:47 models.py:91 models.py:274
+msgid "name"
+msgstr ""
+
+#: models.py:48 models.py:93
+msgid "slug"
+msgstr ""
+
+#: models.py:49
+msgid "description"
+msgstr ""
+
+#: models.py:58
+msgid "category"
+msgstr ""
+
+#: models.py:59
+msgid "categories"
+msgstr ""
+
+#: models.py:96
+msgid ""
+"The name of the product as it will appear in URLs e.g http://domain.com/"
+"store/[product-slug]/"
+msgstr ""
+
+#: models.py:99
+msgid "single price"
+msgstr ""
+
+#: models.py:99
+msgid "same price for all variants"
+msgstr ""
+
+#: models.py:100 models.py:275
+msgid "price"
+msgstr ""
+
+#: models.py:102
+msgid "identifier"
+msgstr ""
+
+#: models.py:104 models.py:276 models.py:284
+msgid "active"
+msgstr ""
+
+#: models.py:105
+msgid "purchasing enabled"
+msgstr ""
+
+#: models.py:106
+msgid "presale"
+msgstr ""
+
+#: models.py:107
+msgid "preview enabled"
+msgstr ""
+
+#: models.py:108
+msgid "available on"
+msgstr ""
+
+#: models.py:109
+msgid "featured"
+msgstr ""
+
+#: models.py:113 models.py:291
+msgid "content type"
+msgstr ""
+
+#: models.py:118 models.py:286
+msgid "created on"
+msgstr ""
+
+#: models.py:119 models.py:287
+msgid "modified on"
+msgstr ""
+
+#: models.py:203
+msgid "Your child Product model must implement the url() method"
+msgstr ""
+
+#: models.py:213 models.py:241
+msgid "images"
+msgstr ""
+
+#: models.py:220
+msgid "image set"
+msgstr ""
+
+#: models.py:221
+msgid "image sets"
+msgstr ""
+
+#: models.py:229 models.py:240
+msgid "image"
+msgstr ""
+
+#: models.py:273
+msgid "SKU"
+msgstr ""
+
+#: models.py:278
+msgid "weight"
+msgstr ""
+
+#: models.py:278
+msgid "value stored in grams"
+msgstr ""
+
+#: models.py:279
+msgid "width"
+msgstr ""
+
+#: models.py:279 models.py:280 models.py:281
+msgid "value stored in millimeters"
+msgstr ""
+
+#: models.py:280
+msgid "height"
+msgstr ""
+
+#: models.py:281
+msgid "depth"
+msgstr ""
+
+#: models.py:283
+msgid "stock"
+msgstr ""

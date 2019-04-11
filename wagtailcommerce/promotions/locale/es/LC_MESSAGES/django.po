@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Rafael Ponieman <rafa@wearetheplus.com>, 2018\n"
+"Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
+"teams/84515/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Discount on order total"
+msgstr "Descuento en total del pedido"
+
+msgid "Fixed amount"
+msgstr "Monto fijo"
+
+msgid "Percentage"
+msgstr "Porcentaje"
+
+msgid "name"
+msgstr "nombre"
+
+msgid "code"
+msgstr "código"
+
+msgid "coupon type"
+msgstr "tipo de cupón"
+
+msgid "coupon mode"
+msgstr "modo de cupón"
+
+msgid "coupon amount"
+msgstr "monto de cupón"
+
+msgid "usage limit"
+msgstr "límite de usos"
+
+msgid "times added to cart"
+msgstr "veces agregado al carrito"
+
+msgid "times used"
+msgstr "veces utilizado"
+
+msgid "auto assign to new users"
+msgstr "auto asignar a todos los usuarios"
+
+msgid "active"
+msgstr "activo"
+
+msgid "valid from"
+msgstr "válido desde"
+
+msgid "valid until"
+msgstr "válido hasta"
+
+msgid "auto generated"
+msgstr "auto generado"
+
+msgid "created on"
+msgstr "creado"
+
+msgid "modified on"
+msgstr "modificado"
+
+msgid "basic information"
+msgstr "información básica"
+
+msgid "characteristics"
+msgstr "características"
+
+msgid "validity"
+msgstr "validez"
+
+msgid "No spaces allowed in coupon code"
+msgstr "No se permiten espacios en el código de cupón"
+
+msgid "Enter a value greater than 0 or leave this field empty."
+msgstr "Ingresa un valor mayor a 0 o deja este campo vació"
+
+msgid "coupon"
+msgstr "cupón"
+
+msgid "coupons"
+msgstr "cupones"

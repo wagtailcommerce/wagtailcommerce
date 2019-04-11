@@ -1,0 +1,45 @@
+[main]
+host = https://www.transifex.com
+
+[wagtail-commerce.addresses]
+file_filter = wagtailcommerce/addresses/locale/<lang>/LC_MESSAGES/django.po
+source_file = wagtailcommerce/addresses/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[wagtail-commerce.carts]
+file_filter = wagtailcommerce/carts/locale/<lang>/LC_MESSAGES/django.po
+source_file = wagtailcommerce/carts/locale/en.po
+source_lang = en
+type = PO
+
+[wagtail-commerce.orders]
+file_filter = wagtailcommerce/orders/locale/<lang>/LC_MESSAGES/django.po
+source_file = wagtailcommerce/orders/locale/en.po
+source_lang = en
+type = PO
+
+[wagtail-commerce.products]
+file_filter = wagtailcommerce/products/locale/<lang>/LC_MESSAGES/django.po
+source_file = wagtailcommerce/products/locale/en.po
+source_lang = en
+type = PO
+
+[wagtail-commerce.promotions]
+file_filter = wagtailcommerce/promotions/locale/<lang>/LC_MESSAGES/django.po
+source_file = wagtailcommerce/promotions/locale/en.po
+source_lang = en
+type = PO
+
+[wagtail-commerce.shipping]
+file_filter = wagtailcommerce/shipping/locale/<lang>/LC_MESSAGES/django.po
+source_file = wagtailcommerce/shipping/locale/en.po
+source_lang = en
+type = PO
+
+[wagtail-commerce.stores]
+file_filter = wagtailcommerce/stores/locale/<lang>/LC_MESSAGES/django.po
+source_file = wagtailcommerce/stores/locale/en.po
+source_lang = en
+type = PO
+
