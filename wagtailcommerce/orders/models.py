@@ -1,15 +1,16 @@
-import shortuuid
+from __future__ import absolute_import, unicode_literals
 
+import shortuuid
 from django.conf import settings
 from django.contrib.postgres.fields import JSONField
 from django.db import models
 from django.db.models import Sum
 from django.utils.translation import ugettext_lazy as _
-
 from modelcluster.fields import ParentalKey
 from modelcluster.models import ClusterableModel
-from wagtail.admin.edit_handlers import (FieldPanel, FieldRowPanel, InlinePanel, MultiFieldPanel, ObjectList,
-                                                StreamFieldPanel, TabbedInterface)
+from wagtail.admin.edit_handlers import (
+    FieldPanel, FieldRowPanel, InlinePanel, MultiFieldPanel, ObjectList, StreamFieldPanel,
+    TabbedInterface)
 
 from wagtailcommerce.orders.signals import order_paid
 from wagtailcommerce.promotions.models import Coupon
@@ -77,7 +78,7 @@ class Order(ClusterableModel):
             MultiFieldPanel([
                 FieldRowPanel([
                     ReadOnlyPanel('identifier', heading=_('Identifier')),
-                    ReadOnlyPanel('get_status_display', heading=_('Status')),
+                    FieldPanel('status'),
                 ])
             ], heading=_('Order details')),
             MultiFieldPanel([
