@@ -79,7 +79,7 @@ class Cart(models.Model):
         (CANCELED, pgettext_lazy('Cart status', 'Canceled')),
     )
 
-    store = models.ForeignKey('wagtailcommerce_stores.Store', related_name='carts')
+    store = models.ForeignKey('wagtailcommerce_stores.Store', related_name='carts', on_delete=models.PROTECT)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, related_name='carts',
                              on_delete=models.CASCADE, verbose_name=_('user'))
     status = models.CharField(_('status'), max_length=128, default=OPEN, choices=STATUS_CHOICES)
@@ -187,8 +187,10 @@ class Cart(models.Model):
 
 
 class CartLine(models.Model):
-    cart = models.ForeignKey(Cart, related_name='lines')
-    variant = models.ForeignKey('wagtailcommerce_products.ProductVariant', verbose_name=_('product'), related_name='+')
+    cart = models.ForeignKey(Cart, related_name='lines', on_delete=models.CASCADE)
+    variant = models.ForeignKey(
+        'wagtailcommerce_products.ProductVariant', verbose_name=_('product'), related_name='+',
+        null=True, on_delete=models.SET_NULL)
     quantity = models.PositiveIntegerField(_('quantity'))
 
     created = models.DateTimeField(_('created on'), auto_now_add=True)

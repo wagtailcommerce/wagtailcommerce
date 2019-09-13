@@ -42,7 +42,7 @@ def get_default_product_variant_content_type():
 
 
 class Category(MP_Node):
-    store = models.ForeignKey('wagtailcommerce_stores.Store', related_name='categories')
+    store = models.ForeignKey('wagtailcommerce_stores.Store', related_name='categories', on_delete=models.PROTECT)
     name = models.CharField(_('name'), max_length=150)
     slug = models.SlugField(_('slug'), max_length=50)
     description = models.TextField(_('description'), blank=True)
@@ -86,7 +86,7 @@ class AbstractProduct(models.Model):
 
 
 class Product(AbstractProduct, index.Indexed, ClusterableModel, metaclass=ProductBase):
-    store = models.ForeignKey('wagtailcommerce_stores.Store', related_name='products')
+    store = models.ForeignKey('wagtailcommerce_stores.Store', related_name='products', on_delete=models.PROTECT)
     name = models.CharField(_('name'), max_length=150)
     slug = models.SlugField(
         verbose_name=_('slug'),

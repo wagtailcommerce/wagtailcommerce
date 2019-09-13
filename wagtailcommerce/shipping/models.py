@@ -68,7 +68,7 @@ class AbstractShippingMethod(models.Model):
 
 
 class ShippingMethod(AbstractShippingMethod, ClusterableModel, metaclass=ShippingMethodBase):
-    store = models.ForeignKey('wagtailcommerce_stores.Store', related_name='shipping_methods')
+    store = models.ForeignKey('wagtailcommerce_stores.Store', related_name='shipping_methods', on_delete=models.PROTECT)
 
     content_type = models.ForeignKey(
         'contenttypes.ContentType',
@@ -155,7 +155,7 @@ class AbstractShipment(models.Model):
 
 class Shipment(AbstractShipment, ClusterableModel, metaclass=ShipmentBase):
     order = ParentalKey('wagtailcommerce_orders.Order', related_name='shipments')
-    shipping_method = models.ForeignKey(ShippingMethod, related_name='shipments')
+    shipping_method = models.ForeignKey(ShippingMethod, related_name='shipments', on_delete=models.PROTECT)
     tracking_code = models.CharField(_('tracking code'), max_length=255, blank=True)
 
     content_type = models.ForeignKey(

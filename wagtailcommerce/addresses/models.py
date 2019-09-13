@@ -6,7 +6,7 @@ from django.contrib.auth import get_user_model
 
 
 class Address(models.Model):
-    user = models.ForeignKey(get_user_model(), related_name='addresses', blank=True, null=True)
+    user = models.ForeignKey(get_user_model(), related_name='addresses', blank=True, null=True, on_delete=models.SET_NULL)
     deleted = models.BooleanField(_('Deleted'), default=False)
     created = models.DateTimeField(_('Created'), auto_now_add=True)
     modified = models.DateTimeField(_('Modified'), auto_now=True)

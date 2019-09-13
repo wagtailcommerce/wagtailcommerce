@@ -36,7 +36,7 @@ class Store(models.Model):
                                    validators=[MinValueValidator(0), MaxValueValidator(100)])
 
     # TODO: allow multiple currencies
-    currency = models.ForeignKey(Currency, related_name="stores")
+    currency = models.ForeignKey(Currency, related_name="stores", on_delete=models.PROTECT)
 
     panels = [
         FieldPanel('name'),

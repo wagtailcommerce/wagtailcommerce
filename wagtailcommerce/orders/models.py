@@ -45,10 +45,14 @@ class Order(ClusterableModel):
 
     cart = models.ForeignKey('wagtailcommerce_carts.Cart', related_name='orders', verbose_name=_('cart'),
                              blank=True, null=True, on_delete=models.SET_NULL)
-    store = models.ForeignKey('wagtailcommerce_stores.Store', related_name='orders', verbose_name=_('store'))
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='orders', verbose_name=_('user'))
-    billing_address = models.ForeignKey('wagtailcommerce_addresses.Address', blank=True, null=True, related_name='orders_by_billing_address')
-    shipping_address = models.ForeignKey('wagtailcommerce_addresses.Address', blank=True, null=True, related_name='orders_by_shipping_address')
+    store = models.ForeignKey('wagtailcommerce_stores.Store', related_name='orders', verbose_name=_('store'), on_delete=models.PROTECT)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='orders', verbose_name=_('user'), on_delete=models.PROTECT)
+    billing_address = models.ForeignKey(
+        'wagtailcommerce_addresses.Address', blank=True, null=True,
+        related_name='orders_by_billing_address', on_delete=models.SET_NULL)
+    shipping_address = models.ForeignKey(
+        'wagtailcommerce_addresses.Address', blank=True, null=True,
+        related_name='orders_by_shipping_address', on_delete=models.SET_NULL)
 
     # Financial information
     subtotal = models.DecimalField(_('product sub total'), decimal_places=2, max_digits=12)
@@ -64,7 +68,9 @@ class Order(ClusterableModel):
     # currency = models.ForeignKey('stores.Currency', related_name='orders', verbose_name=_('currency'))
 
     # Coupon information
-    coupon = models.ForeignKey('wagtailcommerce_promotions.Coupon', verbose_name=_('coupon'), blank=True, null=True, related_name='orders')
+    coupon = models.ForeignKey(
+        'wagtailcommerce_promotions.Coupon', verbose_name=_('coupon'), blank=True, null=True,
+        related_name='orders', on_delete=models.SET_NULL)
     coupon_type = models.CharField(_('coupon type'), max_length=20, choices=Coupon.COUPON_TYPE_CHOICES, blank=True)
     coupon_mode = models.CharField(_('coupon mode'), max_length=20, choices=Coupon.COUPON_MODE_CHOICES, blank=True)
     coupon_amount = models.DecimalField(_('coupon amount'), decimal_places=2, max_digits=12, blank=True, null=True)
