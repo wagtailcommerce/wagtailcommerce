@@ -21,19 +21,10 @@ except ImportError:
 
 
 install_requires = [
-    'Django>=1.10,<1.12',
+    'Wagtail>=2.6,<2.7',
     'django-countries>=4.6,<5.0',
-    'django-modelcluster>=4.2,<5.0',
-    'django-taggit>=0.23,<0.24',
-    'django-treebeard>=3.0,<5.0',
-    'djangorestframework>=3.1.3',
-    'Pillow>=2.6.1',
     'shortuuid>=0.5,<0.6',
     'beautifulsoup4>=4.5.1',
-    'html5lib>=0.999,<2',
-    'Unidecode>=0.04.14',
-    'Willow>=1.1,<1.2',
-    'requests>=2.11.1,<3.0',
     'graphene-django>=2.0,<3.0',
 ]
 
