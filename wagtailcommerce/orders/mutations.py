@@ -41,15 +41,17 @@ class PlaceOrder(graphene.Mutation):
         if cart.coupon and not verify_coupon(cart.coupon):
             coupon_code = cart.coupon.code
             remove_coupon(cart)
-            place_order_error = _('The coupon "{}" you were currently using is no longer valid. It may have expired or reached its maximum uses.').format(coupon_code)
+            place_order_error = _(
+                'The coupon "{}" you were currently using is no longer valid. It may have expired or reached its maximum uses.'
+            ).format(coupon_code)
 
-        removed_variants = verify_cart_lines_stock(info.context.user, cart)
+        removed_variant_data = verify_cart_lines_stock(info.context.user, cart)
 
-        if removed_variants:
-            for variant in removed_variants:
-                if place_order_error:
-                    place_order_error += ' '
-                place_order_error += _('The product {} is no longer available.').format(variant)
+        for variant_data in removed_variant_data:
+            if place_order_error:
+                place_order_error += ' '
+
+            place_order_error += variant_data['removal_reason_message']
 
         if place_order_error:
             return PlaceOrder(error=place_order_error, success=False)

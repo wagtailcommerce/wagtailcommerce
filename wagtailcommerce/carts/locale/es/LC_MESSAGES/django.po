@@ -3,14 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# Translators:
+# Rafael Ponieman <rafa@wearetheplus.com>, 2019
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-12 05:10-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Rafael Ponieman <rafa@wearetheplus.com>, 2018\n"
+"POT-Creation-Date: 2019-10-29 02:53-0300\n"
+"PO-Revision-Date: 2018-03-16 20:36+0000\n"
+"Last-Translator: Rafael Ponieman <rafa@wearetheplus.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
 "teams/84515/es/)\n"
 "MIME-Version: 1.0\n"
@@ -75,8 +78,14 @@ msgstr "líneas del carrito"
 msgid "Product variant not found"
 msgstr "Variante de producto no encontrada"
 
-msgid "No more products available for the selected size"
+msgid "No more products available for the selected size."
 msgstr "No hay más unidades disponibles para el talle seleccionado"
 
 msgid "Address not found"
 msgstr "Dirección no encontrada"
+
+msgid "The product {} is no longer available."
+msgstr "El producto {} ya no está disponible."
+
+msgid "We're running out of \"{}\". There is only {} left."
+msgstr "Nos estamos quedando sin \"{}\". Sólo quedan {}."

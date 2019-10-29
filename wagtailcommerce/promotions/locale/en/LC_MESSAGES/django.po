@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"POT-Creation-Date: 2019-10-29 02:53-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: models.py:30
 msgid "Discount on order total"
@@ -77,42 +78,46 @@ msgstr ""
 msgid "valid until"
 msgstr ""
 
-#: models.py:63
+#: models.py:65
+msgid "Only apply to products in selected categories"
+msgstr ""
+
+#: models.py:69
 msgid "auto generated"
 msgstr ""
 
-#: models.py:65
+#: models.py:71
 msgid "created on"
 msgstr ""
 
-#: models.py:66
+#: models.py:72
 msgid "modified on"
 msgstr ""
 
-#: models.py:74
+#: models.py:80
 msgid "basic information"
 msgstr ""
 
-#: models.py:87
+#: models.py:96
 msgid "characteristics"
 msgstr ""
 
-#: models.py:92
+#: models.py:101
 msgid "validity"
 msgstr ""
 
-#: models.py:103
+#: models.py:112
 msgid "No spaces allowed in coupon code"
 msgstr ""
 
-#: models.py:121
+#: models.py:130
 msgid "Enter a value greater than 0 or leave this field empty."
 msgstr ""
 
-#: models.py:124
+#: models.py:133
 msgid "coupon"
 msgstr ""
 
-#: models.py:125
+#: models.py:134
 msgid "coupons"
 msgstr ""

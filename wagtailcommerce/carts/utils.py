@@ -1,5 +1,7 @@
 from __future__ import absolute_import, unicode_literals
 
+from django.utils.translation import ugettext_lazy as _
+
 from wagtailcommerce.carts.exceptions import CartException
 from wagtailcommerce.carts.models import CartLine
 from wagtailcommerce.promotions.models import Coupon
@@ -34,8 +36,8 @@ def get_user_cart(store, user):
     return Cart.objects.open().from_store(store).for_user(user).first()
 
 
-def can_purchase_variant(user, variant):
-    if (variant.stock <= 0 or not variant.product.purchasing_enabled or (
+def is_variant_purchasable(user, variant):
+    if (not variant.product.purchasing_enabled or (
             variant.active is False or variant.product.active is False) and not (user.is_staff and variant.product.preview_enabled)):
         return False
     return True
@@ -161,6 +163,7 @@ def add_to_cart(request, variant):
 def modify_cart_line(request, variant, quantity):
     """
     Find a cart line matching the variant and modify its quantity
+    place_order_error += variant_data.removal_reason_message
     """
     from wagtailcommerce.carts.models import CartLine
 
@@ -220,9 +223,31 @@ def verify_cart_lines_stock(user, cart):
     no_stock_variants = []
 
     for line in cart.lines.all():
-        if not can_purchase_variant(user, line.variant):
-            no_stock_variants.append(line.variant)
+        variant = line.variant
+
+        if not is_variant_purchasable(user, variant):
+            no_stock_variants.append({
+                'variant': variant,
+                'removal_reason_message': _('The product {} is no longer available.').format(variant)
+            })
 
             line.delete()
+
+        elif variant.stock <= 0:
+            no_stock_variants.append({
+                'variant': variant,
+                'removal_reason_message': _('The product {} is no longer available.').format(variant)
+            })
+
+            line.delete()
+
+        elif variant.stock < line.quantity:
+            no_stock_variants.append({
+                'variant': variant,
+                'removal_reason_message': _('We\'re running out of "{}". There is only {} left.').format(variant, variant.stock)
+            })
+
+            line.quantity = variant.stock
+            line.save()
 
     return no_stock_variants

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"POT-Creation-Date: 2019-10-29 02:53-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,84 +16,93 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: models.py:71
+#: models.py:75
 msgctxt "Cart status"
 msgid "Open"
 msgstr ""
 
-#: models.py:72
+#: models.py:76
 msgctxt "Cart status"
 msgid "Replaced"
 msgstr ""
 
-#: models.py:73
+#: models.py:77
 msgctxt "Cart status"
 msgid "Awaiting payment"
 msgstr ""
 
-#: models.py:74
+#: models.py:78
 msgctxt "Cart status"
 msgid "Paid"
 msgstr ""
 
-#: models.py:75
+#: models.py:79
 msgctxt "Cart status"
 msgid "Canceled"
 msgstr ""
 
-#: models.py:80
+#: models.py:84
 msgid "user"
 msgstr ""
 
-#: models.py:81
+#: models.py:85
 msgid "status"
 msgstr ""
 
-#: models.py:83
+#: models.py:87
 msgid "token"
 msgstr ""
 
-#: models.py:88
+#: models.py:92
 msgid "updated on"
 msgstr ""
 
-#: models.py:89 models.py:179
+#: models.py:93 models.py:196
 msgid "created on"
 msgstr ""
 
-#: models.py:170
+#: models.py:185
 msgid "cart"
 msgstr ""
 
-#: models.py:171
+#: models.py:186
 msgid "carts"
 msgstr ""
 
-#: models.py:176
+#: models.py:192
 msgid "product"
 msgstr ""
 
-#: models.py:177
+#: models.py:194
 msgid "quantity"
 msgstr ""
 
-#: models.py:221
+#: models.py:247
 msgid "cart line"
 msgstr ""
 
-#: models.py:222
+#: models.py:248
 msgid "cart lines"
 msgstr ""
 
-#: mutations.py:45 mutations.py:75
+#: mutations.py:47 mutations.py:77
 msgid "Product variant not found"
 msgstr ""
 
-#: mutations.py:65
-msgid "No more products available for the selected size"
+#: mutations.py:67
+msgid "No more products available for the selected size."
 msgstr ""
 
 #: schema.py:31
 msgid "Address not found"
+msgstr ""
+
+#: utils.py:231 utils.py:239
+msgid "The product {} is no longer available."
+msgstr ""
+
+#: utils.py:247
+msgid "We're running out of \"{}\". There is only {} left."
 msgstr ""

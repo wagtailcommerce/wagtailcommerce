@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"POT-Creation-Date: 2019-10-29 02:53-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,24 +16,25 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: models.py:75 models.py:141
+#: models.py:75 models.py:163
 msgid "content type"
 msgstr ""
 
-#: models.py:137
+#: models.py:159
 msgid "tracking code"
 msgstr ""
 
-#: models.py:146
+#: models.py:168
 msgid "created on"
 msgstr ""
 
-#: models.py:181
+#: models.py:203
 msgid "shipment"
 msgstr ""
 
-#: models.py:182
+#: models.py:204
 msgid "shipments"
 msgstr ""
 
