@@ -1,0 +1,155 @@
+{% load i18n wagtailcore_tags %}
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <style type="text/css">
+      body {
+        font-family: {{ font_family|default:"\"Open Sans\", sans-serif" }};
+        font-size: 14px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .label-container {
+        border: 2px solid #333;
+        width: 400px;
+      }
+      .label-heading {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid #333;
+      }
+      .label-heading .label-logo {
+        padding: 0 0 0 5px;
+      }
+      .label-heading .label-field {
+        border-left: 2px solid #333;
+      }
+      .label-heading img {
+        height: 30px;
+        display: block;
+      }
+      .label-order-number {
+        width: 120px;
+      }
+      .label-order-number .field-content {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .label-content {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 2px solid #333;
+      }
+      .label-content:last-child {
+        border-bottom: none;
+      }
+      .field-heading {
+        background: #eee;
+        width: auto;
+        padding: 4px 5px;
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+      .field-content {
+        padding: 7px 5px;
+      }
+      .field-heading.full {
+        width: 100%;
+      }
+      .address-component b {
+        font-weight: 600;
+      }
+      p {
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="label-container">
+      <div class="label-heading">
+        {% if test_logo or shipping_method.label_logo %}
+        <div class="label-logo">
+          {% if test_logo %}
+            <img src="{{ test_logo }}" alt="" />
+          {% else %}
+            <img src="file://{{ MEDIA_URL }}/{{ shipping_method.label_logo.file.name }}" alt="">
+          {% endif %}
+        </div>
+        {% endif %}
+        <div class="label-field label-order-number">
+          <div class="field-heading full">
+            {% trans "Order" %}
+          </div>
+          <div class="field-content">
+            {{ order.identifier }}
+          </div>
+        </div>
+      </div>
+      {% if shipping_method.label_heading %}
+      <div class="label-content">
+        <div class="label-field">
+          <div class="field-content">
+            {{ shipping_method.label_heading|richtext }}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+      <div class="label-content">
+        <div class="label-field">
+          <div class="field-heading">
+            {% trans "Ship to" %}
+          </div>
+          <div class="field-content">
+            {{ order.user.get_full_name }}
+          </div>
+        </div>
+      </div>
+      <div class="label-content">
+        <div class="label-field">
+          <div class="field-heading">
+            {% trans "Address" %}
+          </div>
+          <div class="field-content">
+            {{ order.shipping_address.street_address_1 }} {{ order.shipping_address.street_number }}
+            {% if order.shipping_address.street_address_2 %}
+            <br>{{ order.shipping_address.street_address_2 }}
+            {% endif %}
+            {% if order.shipping_address.floor or order.shipping_address.apartment_number %}
+              <br>
+            {% endif %}
+            {% if order.shipping_address.floor %}
+            <span class="address-component">
+              <b>{% trans "Floor" %}</b> {{ order.shipping_address.apartment_number }}
+            </span>
+            {% endif %}
+            {% if order.shipping_address.apartment_number %}
+            <span class="address-component">
+              <b>{% trans "Apartment number" %}</b> {{ order.shipping_address.apartment_number }}
+            </span>
+            {% endif %}
+            <br>
+            {{ order.shipping_address.district }}, {{ order.shipping_address.postal_code }}<br>
+            {{ order.shipping_address.get_country_area }}, {{ order.shipping_address.country }}
+          </div>
+        </div>
+      </div>
+      <div class="label-content">
+        <div class="label-field">
+          <div class="field-heading">
+            {% trans "Phone" %}
+          </div>
+          <div class="field-content">
+            {{ order.shipping_address.phone }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

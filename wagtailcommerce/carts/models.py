@@ -152,8 +152,8 @@ class Cart(models.Model):
 
         return q
 
-    def get_shipping_cost(self, address):
-        return get_shipping_cost_util(self, address)
+    def get_shipping_cost(self, shipping_address, shipping_method):
+        return get_shipping_cost_util(self, shipping_address, shipping_method)
 
     def get_totals(self):
         subtotal = self.get_subtotal()
@@ -165,14 +165,13 @@ class Cart(models.Model):
             'total': subtotal - discount
         }
 
-    def get_totals_with_shipping(self, address):
+    def get_totals_with_shipping(self, shipping_address, shipping_method):
         subtotal = self.get_subtotal()
         discount = self.get_discount()
 
-        if address:
-            shipping_cost = self.get_shipping_cost(address)
+        shipping_cost = self.get_shipping_cost(shipping_address, shipping_method)
 
-        return {
+        ret = {
             'subtotal': subtotal,
             'discount': discount,
             'shipping_cost': shipping_cost['cost'],
@@ -180,6 +179,8 @@ class Cart(models.Model):
             'shipping_cost_total': shipping_cost['total'],
             'total': subtotal - discount + shipping_cost['total']
         }
+
+        return ret
 
     class Meta:
         verbose_name = _('cart')

@@ -1,8 +1,12 @@
+import importlib
+import re
+
+from django.conf import settings
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from django_countries.fields import CountryField
 
-from django.contrib.auth import get_user_model
+from django_countries.fields import CountryField
 
 
 class Address(models.Model):
@@ -44,7 +48,32 @@ class Address(models.Model):
 
         return street
 
+    def get_country_area(self):
+        name = self.country_area
+
+        # If there's a provided Country Area resolver function, use it to transform it's value
+        resolver_name = getattr(settings, 'WAGTAILCOMMERCE_COUNTRY_AREA_NAME_RESOLVER')
+
+
+        if resolver_name:
+            parts = re.split(r'^(.*)\.(.*)', resolver_name)
+
+            if len(parts) == 4:
+                resolver = importlib.import_module(parts[1])
+
+                return getattr(resolver, parts[2])(self.country_area)
+            else:
+                raise Exception(
+                    'Please provide the Python path for a function that receives a Country Area value ' +
+                    'and returns a corresponding verbose representation. E.g. areas.utils.get_country_area.'
+                )
+
+        return name
+
+
     class Meta:
         verbose_name = _('Address')
         verbose_name_plural = _('Addresses')
-        ordering = ('-default_shipping_address', '-default_billing_address', '-created', )
+        ordering = (
+            '-default_shipping_address', '-default_billing_address', '-created',
+        )

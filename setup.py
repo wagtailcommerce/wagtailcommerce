@@ -26,6 +26,8 @@ install_requires = [
     'shortuuid>=0.5,<0.6',
     'beautifulsoup4>=4.5.1',
     'graphene-django>=2.0,<3.0',
+    'weasyprint>=51',
+    'django-weasyprint>=1.0.1'
 ]
 
 # Testing dependencies

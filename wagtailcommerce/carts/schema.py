@@ -7,6 +7,7 @@ from wagtailcommerce.carts.object_types import CartReplyObjectType, CartTotalsOb
 from wagtailcommerce.carts.utils import get_cart_from_request
 from wagtailcommerce.promotions.utils import remove_coupon, verify_coupon
 from wagtailcommerce.shipping.exceptions import ShippingCostCalculationException
+from wagtailcommerce.shipping.models import ShippingMethod
 
 
 class CartQuery(graphene.ObjectType):
@@ -14,21 +15,25 @@ class CartQuery(graphene.ObjectType):
 
     cart_totals = graphene.Field(
         lambda: CartTotalsObjectType,
-        address_pk=graphene.String(required=False),
-        shipping_method_code=graphene.String(required=False)
+        shipping_address_pk=graphene.String(required=False),
+        shipping_method_pk=graphene.String(required=False)
     )
 
-    def resolve_cart_totals(self, info, address_pk=None, shipping_method_code=None, **kwargs):
+    def resolve_cart_totals(self, info, shipping_address_pk=None, shipping_method_pk=None, **kwargs):
         cart = get_cart_from_request(info.context)
 
-        if address_pk:
+        if shipping_address_pk and shipping_method_pk:
             try:
-                address = info.context.user.addresses.get(deleted=False, pk=address_pk)
+                shipping_address = info.context.user.addresses.get(deleted=False, pk=shipping_address_pk)
+                shipping_method = ShippingMethod.objects.for_shipping_address(
+                    shipping_address, info.context.user
+                ).get(pk=shipping_method_pk).specific
 
-                totals = cart.get_totals_with_shipping(address)
-
+                totals = cart.get_totals_with_shipping(shipping_address, shipping_method)
             except Address.DoesNotExist:
                 raise ShippingCostCalculationException(_('Address not found'))
+            except ShippingMethod.DoesNotExist:
+                raise ShippingCostCalculationException(_('Shipping method not found'))
 
         else:
             totals = cart.get_totals()

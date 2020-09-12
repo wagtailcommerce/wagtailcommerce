@@ -235,8 +235,7 @@ class Image(Orderable):
         'wagtailimages.Image',
         verbose_name=_('image'),
         null=True, blank=True,
-        on_delete=models.SET_NULL,
-        related_name='wagtailcommerce_images'
+        on_delete=models.SET_NULL
     )
 
     panels = [

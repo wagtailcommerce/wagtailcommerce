@@ -10,12 +10,14 @@ from wagtailcommerce.orders.object_types import OrderObjectType
 from wagtailcommerce.orders.utils import create_order
 from wagtailcommerce.payments.models import PaymentMethod
 from wagtailcommerce.promotions.utils import remove_coupon, verify_coupon
+from wagtailcommerce.shipping.models import ShippingMethod
 
 
 class PlaceOrder(graphene.Mutation):
     class Arguments:
         shipping_address_pk = graphene.String()
         billing_address_pk = graphene.String()
+        shipping_method_pk = graphene.String()
 
     payment_redirect_url = graphene.String()
     success = graphene.Boolean()
@@ -23,7 +25,7 @@ class PlaceOrder(graphene.Mutation):
     error = graphene.String()
 
     @transaction.atomic
-    def mutate(self, info, shipping_address_pk, billing_address_pk, *args):
+    def mutate(self, info, shipping_address_pk, billing_address_pk, shipping_method_pk, *args):
         try:
             shipping_address = Address.objects.get(user=info.context.user, pk=shipping_address_pk)
         except Address.DoesNotExist:
@@ -32,6 +34,12 @@ class PlaceOrder(graphene.Mutation):
         try:
             billing_address = Address.objects.get(user=info.context.user, pk=billing_address_pk)
         except Address.DoesNotExist:
+            raise Exception
+
+        try:
+            shipping_method = ShippingMethod.objects.for_shipping_address(
+                shipping_address, info.context.user).get(pk=shipping_method_pk).specific
+        except ShippingMethod.DoesNotExist:
             raise Exception
 
         cart = get_cart_from_request(info.context)
@@ -58,7 +66,7 @@ class PlaceOrder(graphene.Mutation):
 
         method = PaymentMethod.objects.specific().filter(active=True).first()
 
-        order = create_order(info.context, shipping_address, billing_address)
+        order = create_order(info.context, shipping_address, billing_address, shipping_method)
 
         payment_redirect_url = method.generate_payment_redirect_url(order, info.context.site.root_url)
 

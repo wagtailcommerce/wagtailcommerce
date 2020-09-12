@@ -9,10 +9,10 @@ from django.utils.translation import ugettext_lazy as _
 from modelcluster.fields import ParentalKey
 from modelcluster.models import ClusterableModel
 from wagtail.admin.edit_handlers import (
-    FieldPanel, FieldRowPanel, InlinePanel, MultiFieldPanel, ObjectList, StreamFieldPanel,
+    FieldPanel, FieldRowPanel, InlinePanel, MultiFieldPanel, ObjectList,
     TabbedInterface)
 
-from wagtailcommerce.orders.signals import order_paid
+from wagtailcommerce.orders.signals import order_paid_signal
 from wagtailcommerce.promotions.models import Coupon
 from wagtailcommerce.utils.edit_handlers import ReadOnlyPanel
 
@@ -64,6 +64,12 @@ class Order(ClusterableModel):
     total = models.DecimalField(_('order total'), decimal_places=2, max_digits=12)
     total_inc_tax = models.DecimalField(_('order total (inc. tax)'), decimal_places=2, max_digits=12)
 
+    # Shipping
+    # TODO: persist the shipping method information on the order itself in case it's modified or deleted
+    shipping_method = models.ForeignKey(
+        'wagtailcommerce_shipping.ShippingMethod', related_name='orders',
+        verbose_name=_('shipping method'), blank=True, null=True, on_delete=models.SET_NULL)
+
     # TODO: multi-currency support. Now a single store can only have one currency.
     # currency = models.ForeignKey('stores.Currency', related_name='orders', verbose_name=_('currency'))
 
@@ -76,6 +82,7 @@ class Order(ClusterableModel):
     coupon_amount = models.DecimalField(_('coupon amount'), decimal_places=2, max_digits=12, blank=True, null=True)
     coupon_code = models.CharField(_('coupon code'), max_length=40, blank=True)
 
+    language_code = models.CharField(_('language code'), max_length=40)
     date_placed = models.DateTimeField(_('date placed'), db_index=True, auto_now_add=True)
     date_paid = models.DateTimeField(_('date paid'), db_index=True, blank=True, null=True)
 
@@ -131,15 +138,23 @@ class Order(ClusterableModel):
             if previous_state.status != 'paid' and self.status == 'paid':
                 # Order has been paid, reduce product stock and trigger event
                 for line in self.lines.all():
-                    v = line.product_variant
-                    v.stock = v.stock - line.quantity
-                    v.save(update_fields=['stock'])
+                    variant = line.product_variant
+                    variant.stock = variant.stock - line.quantity
+                    variant.save(update_fields=['stock'])
 
                 # Update coupon amount
                 if self.coupon:
                     Coupon.objects.filter(pk=self.coupon.pk).update(times_used=models.F('times_used') + 1)
 
-                order_paid.send(Order, order=self)
+                order_paid_signal.send(Order, order=self)
+
+                # If the order has shipping, generate shipment
+                if self.shipping_method:
+                    shipment_generation_result = self.shipping_method.specific.generate_shipment(self)
+
+                    if not shipment_generation_result:
+                        order_shipment_generation_failure_signal.send(self)
+
         except Order.DoesNotExist:
             pass
 
