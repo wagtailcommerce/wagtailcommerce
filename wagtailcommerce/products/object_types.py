@@ -20,3 +20,10 @@ class ProductVariantType(DjangoObjectType):
 
     class Meta:
         model = ProductVariant
+
+
+class BaseProductObjectTypeMixin():
+    price = graphene.Field(graphene.Float)
+
+    def resolve_price(self, info, **kwargs):
+        return self.price

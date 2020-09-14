@@ -193,9 +193,16 @@ class OrderLine(models.Model):
     product_variant = models.ForeignKey('wagtailcommerce_products.ProductVariant', related_name='lines',
                                         null=True, blank=True, on_delete=models.SET_NULL)
     quantity = models.PositiveIntegerField(_('quantity'), default=1)
-    item_price = models.DecimalField(_('item price'), decimal_places=2, max_digits=12)
-    item_discount = models.DecimalField(_('item discount'), decimal_places=2, max_digits=12)
-    item_price_with_discount = models.DecimalField(_('item price with discount'), decimal_places=2, max_digits=12)
+    item_unit_price = models.DecimalField(_('item unit price'), decimal_places=2, max_digits=12)
+    item_unit_regular_price = models.DecimalField(_('item unit regular price'), decimal_places=2, max_digits=12)
+    item_unit_sale_price = models.DecimalField(
+        _('item unit sale price'), decimal_places=2, max_digits=12, blank=True, null=True)
+    item_percentage_discount = models.DecimalField(
+        _('item percentage discount'), decimal_places=2, max_digits=12, blank=True, null=True)
+    item_unit_promotions_discount = models.DecimalField(
+        _('total discounted from each unit based on promotions'), decimal_places=2, max_digits=12)
+    item_unit_price_with_promotions_discount = models.DecimalField(
+        _('item price with promotions discount'), decimal_places=2, max_digits=12)
     line_total = models.DecimalField(_('total'), decimal_places=2, max_digits=12)
 
     # Persistent fields. If the linked Product Variant is deleted, the SKU, product name and variant desc. persist.

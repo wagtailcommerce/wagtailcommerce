@@ -100,8 +100,8 @@ class Cart(models.Model):
     def get_subtotal(self):
         subtotal = Decimal('0')
 
-        for l in self.lines.all():
-            subtotal += l.variant.product.price * Decimal(l.quantity)
+        for line in self.lines.all():
+            subtotal += line.get_item_unit_price() * Decimal(line.quantity)
 
         return subtotal
 
@@ -110,14 +110,14 @@ class Cart(models.Model):
         Get final including shipping (if address is supplied),
         discounts taxes and product base cost.
         """
-        total = self.get_subtotal() - self.get_discount()
+        total = self.get_subtotal() - self.get_promotions_discount()
 
         if address:
             total += self.get_shipping_cost(address)
 
         return total
 
-    def get_discount(self):
+    def get_promotions_discount(self):
         if self.coupon:
             if self.coupon.coupon_type == Coupon.ORDER_TOTAL and self.coupon.coupon_mode == Coupon.COUPON_MODE_PERCENTAGE:
                 if not self.coupon.categories:
@@ -157,7 +157,7 @@ class Cart(models.Model):
 
     def get_totals(self):
         subtotal = self.get_subtotal()
-        discount = self.get_discount()
+        discount = self.get_promotions_discount()
 
         return {
             'subtotal': subtotal,
@@ -167,7 +167,7 @@ class Cart(models.Model):
 
     def get_totals_with_shipping(self, shipping_address, shipping_method):
         subtotal = self.get_subtotal()
-        discount = self.get_discount()
+        discount = self.get_promotions_discount()
 
         shipping_cost = self.get_shipping_cost(shipping_address, shipping_method)
 
@@ -219,30 +219,39 @@ class CartLine(models.Model):
     def has_stock(self):
         return True if self.variant and self.variant.stock > 0 else False
 
-    def get_item_price(self):
+    def get_item_unit_regular_price(self):
+        return self.variant.product.regular_price
+
+    def get_item_unit_sale_price(self):
+        return self.variant.product.sale_price
+
+    def get_item_unit_price(self):
         return self.variant.product.price
 
-    def get_item_discount(self):
+    def get_item_percentage_discount(self):
+        return self.variant.product.percentage_discount
+
+    def get_item_unit_promotions_discount(self):
         if self.cart.coupon:
             # PERCENTAGE COUPON
             if self.cart.coupon.coupon_type == Coupon.ORDER_TOTAL and self.cart.coupon.coupon_mode == Coupon.COUPON_MODE_PERCENTAGE:
                 if not self.cart.coupon.categories or len(set(self.variant.product.categories.values_list('pk', flat=True)) & set(self.cart.coupon.categories.values_list('pk', flat=True))):
-                    return self.get_item_price() * (self.cart.coupon.coupon_amount / Decimal('100'))
+                    return self.get_item_unit_price() * (self.cart.coupon.coupon_amount / Decimal('100'))
             # FIXED COUPON
             elif self.cart.coupon.coupon_type == Coupon.ORDER_TOTAL and self.cart.coupon.coupon_mode == Coupon.COUPON_MODE_FIXED:
                 totals = self.cart.get_totals()
 
-                total_percentage = self.get_item_price() / totals['subtotal']
+                total_percentage = self.get_item_unit_price() / totals['subtotal']
 
                 return totals['discount'] * total_percentage
 
         return Decimal('0')
 
-    def get_item_price_with_discount(self):
-        return self.get_item_price() - self.get_item_discount()
+    def get_item_unit_price_with_promotions_discount(self):
+        return self.get_item_unit_price() - self.get_item_unit_promotions_discount()
 
     def get_total(self):
-        return self.get_item_price_with_discount() * self.quantity
+        return self.get_item_unit_price_with_promotions_discount() * self.quantity
 
     class Meta:
         verbose_name = _('cart line')

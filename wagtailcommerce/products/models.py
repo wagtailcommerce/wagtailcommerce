@@ -1,8 +1,10 @@
 import shortuuid
+from decimal import Decimal
 
 from django.conf import settings
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.dispatch import receiver
 from django.utils.functional import cached_property
@@ -95,8 +97,19 @@ class Product(AbstractProduct, index.Indexed, ClusterableModel, metaclass=Produc
         help_text=_('The name of the product as it will appear in URLs e.g http://domain.com/store/[product-slug]/'))
 
     categories = models.ManyToManyField(Category, blank=True, related_name='products')
-    single_price = models.BooleanField(_('single price'), default=True, help_text=_('same price for all variants'))
-    price = models.DecimalField(_('price'), max_digits=12, decimal_places=2, blank=True, null=True)
+    regular_price = models.DecimalField(_('regular price'), max_digits=12, decimal_places=2, blank=True, null=True)
+    sale_price = models.DecimalField(
+        _('sale price'), max_digits=12, decimal_places=2, blank=True, null=True,
+        help_text=_(
+            'Manually set a fixed sale price. It will be the end amount ' +
+            'charged to customers before promotions are applied.'
+        )
+    )
+    percentage_discount = models.DecimalField(
+        _('percentage discount'),
+        max_digits=12, decimal_places=2, blank=True, null=True,
+        help_text=_('Enter a value from 0 to 100 in order to offer a percentage discount on this product.')
+    )
 
     identifier = models.CharField(_('identifier'), max_length=8, db_index=True, unique=True)
 
@@ -128,6 +141,9 @@ class Product(AbstractProduct, index.Indexed, ClusterableModel, metaclass=Produc
     search_fields = [
         index.SearchField('name', boost=2),
         index.FilterField('price'),
+        index.FilterField('regular_price'),
+        index.FilterField('sale_price'),
+        index.FilterField('percentage_discount'),
         index.FilterField('active'),
         index.FilterField('available_on'),
         index.FilterField('featured'),
@@ -141,7 +157,6 @@ class Product(AbstractProduct, index.Indexed, ClusterableModel, metaclass=Produc
     #     FieldPanel('active'),
     #     FieldPanel('available_on'),
     #     FieldPanel('categories'),
-    #     FieldPanel('single_price'),
     #     FieldPanel('price'),
     # ]
 
@@ -157,6 +172,12 @@ class Product(AbstractProduct, index.Indexed, ClusterableModel, metaclass=Produc
                 # set content type to correctly represent the model class
                 # that this was created as
                 self.content_type = ContentType.objects.get_for_model(self)
+
+    def clean(self):
+        if self.sale_price and self.percentage_discount:
+            raise ValidationError({
+                'percentage_discount': _('Please enter either a sale price or a percentage discount')
+            })
 
     @classmethod
     def get_verbose_name(cls):
@@ -182,6 +203,25 @@ class Product(AbstractProduct, index.Indexed, ClusterableModel, metaclass=Produc
                 break
 
         return uuid
+
+    def get_percentage_discount_amount(self):
+        if self.percentage_discount:
+            return self.percentage_discount / 100 * self.regular_price
+
+        if self.unit_discount:
+            return self.unit_discount
+
+        return Decimal('0')
+
+    @property
+    def price(self):
+        if self.percentage_discount:
+            return self.regular_price - self.percentage_discount / 100 * self.regular_price
+
+        if self.sale_price:
+            return self.sale_price
+
+        return self.regular_price
 
     @cached_property
     def specific(self):

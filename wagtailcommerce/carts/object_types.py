@@ -10,9 +10,11 @@ class CartLineType(DjangoObjectType):
     main_image = graphene.Field(WagtailImageType)
     product = graphene.Field(ProductUnion)
     variant = graphene.Field(ProductVariantUnion)
-    item_price = graphene.Float()
-    item_discount = graphene.Float()
-    item_price_with_discount = graphene.Float()
+    item_unit_price = graphene.Float()
+    item_unit_regular_price = graphene.Float()
+    item_unit_sale_price = graphene.Float()
+    item_percentage_discount = graphene.Float()
+    item_unit_promotions_discount = graphene.Float()
     total = graphene.Float()
 
     def resolve_product(self, info, **kwargs):
@@ -21,14 +23,20 @@ class CartLineType(DjangoObjectType):
     def resolve_main_image(self, info, **kwargs):
         return self.get_image()
 
-    def resolve_item_price(self, info, **kwargs):
-        return self.get_item_price()
+    def resolve_item_unit_price(self, info, **kwargs):
+        return self.get_item_unit_price()
 
-    def resolve_item_discount(self, info, **kwargs):
-        return self.get_item_discount()
+    def resolve_item_unit_regular_price(self, info, **kwargs):
+        return self.get_item_unit_regular_price()
 
-    def resolve_item_price_with_discount(self, info, **kwargs):
-        return self.get_item_price_with_discount()
+    def resolve_item_unit_sale_price(self, info, **kwargs):
+        return self.get_item_unit_sale_price()
+
+    def resolve_item_percentage_discount(self, info, **kwargs):
+        return self.get_item_percentage_discount()
+
+    def resolve_item_unit_promotions_discount(self, info, **kwargs):
+        return self.get_item_unit_promotions_discount()
 
     def resolve_total(self, info, **kwargs):
         return float(self.get_total())
@@ -50,7 +58,7 @@ class CartType(DjangoObjectType):
         return float(self.get_total())
 
     def resolve_discount(self, info, **kwargs):
-        return float(self.get_discount())
+        return float(self.get_promotions_discount())
 
     def resolve_lines(self, info, **kwargs):
         return self.lines.all()
