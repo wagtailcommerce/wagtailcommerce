@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-29 02:53-0300\n"
+"POT-Creation-Date: 2020-09-14 13:51-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,146 +18,170 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: models.py:46 models.py:90 models.py:281
+#: apps.py:8
+msgid "Wagtail Commerce Products"
+msgstr ""
+
+#: models.py:48 models.py:92 models.py:320
 msgid "name"
 msgstr ""
 
-#: models.py:47 models.py:92
+#: models.py:49 models.py:94
 msgid "slug"
 msgstr ""
 
-#: models.py:48
+#: models.py:50
 msgid "description"
 msgstr ""
 
-#: models.py:57
+#: models.py:59
 msgid "category"
 msgstr ""
 
-#: models.py:58
+#: models.py:60
 msgid "categories"
 msgstr ""
 
-#: models.py:95
+#: models.py:97
 msgid ""
 "The name of the product as it will appear in URLs e.g http://domain.com/"
 "store/[product-slug]/"
 msgstr ""
 
-#: models.py:98
-msgid "single price"
+#: models.py:100
+msgid "regular price"
 msgstr ""
 
-#: models.py:98
-msgid "same price for all variants"
-msgstr ""
-
-#: models.py:99 models.py:282
-msgid "price"
-msgstr ""
-
-#: models.py:101
-msgid "identifier"
-msgstr ""
-
-#: models.py:103 models.py:283 models.py:291
-msgid "active"
+#: models.py:102
+msgid "sale price"
 msgstr ""
 
 #: models.py:104
-msgid "purchasing enabled"
+msgid ""
+"Manually set a fixed sale price. It will be the end amount charged to "
+"customers before promotions are applied."
 msgstr ""
 
-#: models.py:105
-msgid "presale"
-msgstr ""
-
-#: models.py:106
-msgid "preview enabled"
-msgstr ""
-
-#: models.py:107
-msgid "available on"
-msgstr ""
-
-#: models.py:108
-msgid "featured"
+#: models.py:109
+msgid "percentage discount"
 msgstr ""
 
 #: models.py:111
-msgid "page title"
+msgid ""
+"Enter a value from 0 to 100 in order to offer a percentage discount on this "
+"product."
 msgstr ""
 
 #: models.py:114
+msgid "identifier"
+msgstr ""
+
+#: models.py:116 models.py:322 models.py:330
+msgid "active"
+msgstr ""
+
+#: models.py:117
+msgid "purchasing enabled"
+msgstr ""
+
+#: models.py:118
+msgid "presale"
+msgstr ""
+
+#: models.py:119
+msgid "preview enabled"
+msgstr ""
+
+#: models.py:120
+msgid "available on"
+msgstr ""
+
+#: models.py:121
+msgid "featured"
+msgstr ""
+
+#: models.py:124
+msgid "page title"
+msgstr ""
+
+#: models.py:127
 msgid ""
 "Optional. 'Search Engine Friendly' title. This will appear at the top of the "
 "browser window."
 msgstr ""
 
-#: models.py:116
+#: models.py:129
 msgid "search description"
 msgstr ""
 
-#: models.py:120 models.py:298
+#: models.py:133 models.py:337
 msgid "content type"
 msgstr ""
 
-#: models.py:125 models.py:293
+#: models.py:138 models.py:332
 msgid "created on"
 msgstr ""
 
-#: models.py:126 models.py:294
+#: models.py:139 models.py:333
 msgid "modified on"
 msgstr ""
 
-#: models.py:210
+#: models.py:179
+msgid "Please enter either a sale price or a percentage discount"
+msgstr ""
+
+#: models.py:250
 msgid "Your child Product model must implement the url() method"
 msgstr ""
 
-#: models.py:220 models.py:248
+#: models.py:260 models.py:287
 msgid "images"
 msgstr ""
 
-#: models.py:227
+#: models.py:267
 msgid "image set"
 msgstr ""
 
-#: models.py:228
+#: models.py:268
 msgid "image sets"
 msgstr ""
 
-#: models.py:236 models.py:247
+#: models.py:276 models.py:286
 msgid "image"
 msgstr ""
 
-#: models.py:280
+#: models.py:319
 msgid "SKU"
 msgstr ""
 
-#: models.py:285
+#: models.py:321
+msgid "price"
+msgstr ""
+
+#: models.py:324
 msgid "weight"
 msgstr ""
 
-#: models.py:285
+#: models.py:324
 msgid "value stored in grams"
 msgstr ""
 
-#: models.py:286
+#: models.py:325
 msgid "width"
 msgstr ""
 
-#: models.py:286 models.py:287 models.py:288
+#: models.py:325 models.py:326 models.py:327
 msgid "value stored in millimeters"
 msgstr ""
 
-#: models.py:287
+#: models.py:326
 msgid "height"
 msgstr ""
 
-#: models.py:288
+#: models.py:327
 msgid "depth"
 msgstr ""
 
-#: models.py:290
+#: models.py:329
 msgid "stock"
 msgstr ""

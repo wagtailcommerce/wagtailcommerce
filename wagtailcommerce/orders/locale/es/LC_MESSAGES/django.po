@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# Rafael Ponieman <rafa@wearetheplus.com>, 2018
+# Rafael Ponieman <rafa@theplus.agency>, 2020
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"POT-Creation-Date: 2020-09-14 13:51-0300\n"
 "PO-Revision-Date: 2018-03-16 20:25+0000\n"
-"Last-Translator: Rafael Ponieman <rafa@wearetheplus.com>, 2018\n"
+"Last-Translator: Rafael Ponieman <rafa@theplus.agency>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
 "teams/84515/es/)\n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Wagtail Commerce Orders"
+msgstr "Wagtail Commerce Pedidos"
 
 msgid "Payment pending"
 msgstr "Pendiente de pago"
@@ -85,6 +88,9 @@ msgstr "total del pedido"
 msgid "order total (inc. tax)"
 msgstr "total del pedido (incluyendo impuestos)"
 
+msgid "shipping method"
+msgstr "medio de envío"
+
 msgid "coupon"
 msgstr "cupón"
 
@@ -100,6 +106,9 @@ msgstr "monto de cupón"
 msgid "coupon code"
 msgstr "código de cupón"
 
+msgid "language code"
+msgstr "código de lenguaje"
+
 msgid "date placed"
 msgstr "fecha de pedido"
 
@@ -108,9 +117,6 @@ msgstr "fecha de pago"
 
 msgid "Identifier"
 msgstr "Identificador"
-
-msgid "Status"
-msgstr "Estado"
 
 msgid "Order details"
 msgstr "Detalles del pedido"
@@ -178,14 +184,23 @@ msgstr "miniatura del producto"
 msgid "quantity"
 msgstr "cantidad"
 
-msgid "item price"
-msgstr "precio del ítem"
+msgid "item unit price"
+msgstr "precio unitario del ítem"
 
-msgid "item discount"
-msgstr "descuento del ítem"
+msgid "item unit regular price"
+msgstr "precio unitario normal del ítem"
 
-msgid "item price with discount"
-msgstr "precio del ítem con descuento"
+msgid "item unit sale price"
+msgstr "precio unitario del ítem con descuento"
+
+msgid "item percentage discount"
+msgstr "porcentaje de descuento del ítem"
+
+msgid "total discounted from each unit based on promotions"
+msgstr "total descontado de cada unidad basado en promociones"
+
+msgid "item price with promotions discount"
+msgstr "previo del ítem con descuentos por promociones"
 
 msgid "total"
 msgstr "total"

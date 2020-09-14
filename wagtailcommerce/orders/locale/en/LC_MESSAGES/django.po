@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-29 02:53-0300\n"
+"POT-Creation-Date: 2020-09-14 13:51-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps.py:8
+msgid "Wagtail Commerce Orders"
+msgstr ""
 
 #: models.py:31
 msgid "Payment pending"
@@ -102,199 +106,219 @@ msgstr ""
 msgid "order total (inc. tax)"
 msgstr ""
 
-#: models.py:72
+#: models.py:71
+msgid "shipping method"
+msgstr ""
+
+#: models.py:78
 msgid "coupon"
 msgstr ""
 
-#: models.py:74
+#: models.py:80
 msgid "coupon type"
 msgstr ""
 
-#: models.py:75
+#: models.py:81
 msgid "coupon mode"
 msgstr ""
 
-#: models.py:76
+#: models.py:82
 msgid "coupon amount"
 msgstr ""
 
-#: models.py:77
+#: models.py:83
 msgid "coupon code"
 msgstr ""
 
-#: models.py:79
-msgid "date placed"
-msgstr ""
-
-#: models.py:80
-msgid "date paid"
+#: models.py:85
+msgid "language code"
 msgstr ""
 
 #: models.py:86
+msgid "date placed"
+msgstr ""
+
+#: models.py:87
+msgid "date paid"
+msgstr ""
+
+#: models.py:93
 msgid "Identifier"
 msgstr ""
 
-#: models.py:89
+#: models.py:96
 msgid "Order details"
 msgstr ""
 
-#: models.py:92
+#: models.py:99
 msgid "Coupon code"
 msgstr ""
 
-#: models.py:95
+#: models.py:102
 msgid "Coupon type"
 msgstr ""
 
-#: models.py:96
+#: models.py:103
 msgid "Coupon mode"
 msgstr ""
 
-#: models.py:97
+#: models.py:104
 msgid "Coupon amount"
 msgstr ""
 
-#: models.py:99
+#: models.py:106
 msgid "Discount"
 msgstr ""
 
-#: models.py:102
+#: models.py:109
 msgid "Shipping cost"
 msgstr ""
 
-#: models.py:103
+#: models.py:110
 msgid "Shipping cost discount"
 msgstr ""
 
-#: models.py:104
+#: models.py:111
 msgid "Shipping cost total"
 msgstr ""
 
-#: models.py:107 models.py:211
+#: models.py:114 models.py:233
 msgid "Subtotal"
 msgstr ""
 
-#: models.py:108
+#: models.py:115
 msgid "Product discount"
 msgstr ""
 
-#: models.py:109
+#: models.py:116
 msgid "Product tax"
 msgstr ""
 
-#: models.py:112
+#: models.py:119
 msgid "Total"
 msgstr ""
 
-#: models.py:114
+#: models.py:121
 msgid "Totals"
 msgstr ""
 
-#: models.py:115
+#: models.py:122
 msgid "Basic info"
 msgstr ""
 
-#: models.py:118
+#: models.py:125
 msgid "Products"
 msgstr ""
 
-#: models.py:121
+#: models.py:128
 msgid "Shipments"
 msgstr ""
 
-#: models.py:169
+#: models.py:184
 msgid "order"
 msgstr ""
 
-#: models.py:170
+#: models.py:185
 msgid "orders"
 msgstr ""
 
-#: models.py:176 models.py:201
+#: models.py:191 models.py:223
 msgid "SKU"
 msgstr ""
 
-#: models.py:177
+#: models.py:192
 msgid "product thumbnail"
 msgstr ""
 
-#: models.py:180
+#: models.py:195
 msgid "quantity"
 msgstr ""
 
-#: models.py:181
-msgid "item price"
+#: models.py:196
+msgid "item unit price"
 msgstr ""
 
-#: models.py:182
-msgid "item discount"
+#: models.py:197
+msgid "item unit regular price"
 msgstr ""
 
-#: models.py:183
-msgid "item price with discount"
+#: models.py:199
+msgid "item unit sale price"
 msgstr ""
 
-#: models.py:184
-msgid "total"
+#: models.py:201
+msgid "item percentage discount"
 msgstr ""
 
-#: models.py:187
-msgid "product name"
+#: models.py:203
+msgid "total discounted from each unit based on promotions"
 msgstr ""
 
-#: models.py:188
-msgid "product variant description"
-msgstr ""
-
-#: models.py:191
-msgid "weight"
-msgstr ""
-
-#: models.py:191
-msgid "value stored in grams"
-msgstr ""
-
-#: models.py:192
-msgid "width"
-msgstr ""
-
-#: models.py:192 models.py:193 models.py:194
-msgid "value stored in millimeters"
-msgstr ""
-
-#: models.py:193
-msgid "height"
-msgstr ""
-
-#: models.py:194
-msgid "depth"
-msgstr ""
-
-#: models.py:202
-msgid "Variant"
-msgstr ""
-
-#: models.py:205 models.py:209
-msgid "Quantity"
+#: models.py:205
+msgid "item price with promotions discount"
 msgstr ""
 
 #: models.py:206
-msgid "Item price"
+msgid "total"
+msgstr ""
+
+#: models.py:209
+msgid "product name"
 msgstr ""
 
 #: models.py:210
+msgid "product variant description"
+msgstr ""
+
+#: models.py:213
+msgid "weight"
+msgstr ""
+
+#: models.py:213
+msgid "value stored in grams"
+msgstr ""
+
+#: models.py:214
+msgid "width"
+msgstr ""
+
+#: models.py:214 models.py:215 models.py:216
+msgid "value stored in millimeters"
+msgstr ""
+
+#: models.py:215
+msgid "height"
+msgstr ""
+
+#: models.py:216
+msgid "depth"
+msgstr ""
+
+#: models.py:224
+msgid "Variant"
+msgstr ""
+
+#: models.py:227 models.py:231
+msgid "Quantity"
+msgstr ""
+
+#: models.py:228
+msgid "Item price"
+msgstr ""
+
+#: models.py:232
 msgid "Item discount"
 msgstr ""
 
-#: models.py:247
+#: models.py:269
 msgid "order line"
 msgstr ""
 
-#: models.py:248
+#: models.py:270
 msgid "order lines"
 msgstr ""
 
-#: mutations.py:45
+#: mutations.py:53
 msgid ""
 "The coupon \"{}\" you were currently using is no longer valid. It may have "
 "expired or reached its maximum uses."

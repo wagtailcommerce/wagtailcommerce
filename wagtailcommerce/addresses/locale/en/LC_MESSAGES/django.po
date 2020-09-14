@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-29 02:53-0300\n"
+"POT-Creation-Date: 2020-09-14 13:51-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,87 +18,91 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: models.py:10
-msgid "Deleted"
-msgstr ""
-
-#: models.py:11
-msgid "Created"
-msgstr ""
-
-#: models.py:12
-msgid "Modified"
-msgstr ""
-
-#: models.py:13
-msgid "Default shipping address"
+#: apps.py:8
+msgid "Wagtail Commerce Addresses"
 msgstr ""
 
 #: models.py:14
-msgid "Default billing address"
+msgid "Deleted"
+msgstr ""
+
+#: models.py:15
+msgid "Created"
 msgstr ""
 
 #: models.py:16
-msgid "Name"
+msgid "Modified"
 msgstr ""
 
 #: models.py:17
-msgid "Last name"
+msgid "Default shipping address"
 msgstr ""
 
 #: models.py:18
-msgid "Address (line 1)"
-msgstr ""
-
-#: models.py:19
-msgid "Address (line 2)"
+msgid "Default billing address"
 msgstr ""
 
 #: models.py:20
-msgid "Street number"
+msgid "Name"
 msgstr ""
 
 #: models.py:21
-msgid "Floor"
+msgid "Last name"
 msgstr ""
 
 #: models.py:22
-msgid "Apartment number"
+msgid "Address (line 1)"
 msgstr ""
 
 #: models.py:23
-msgid "City / Town"
+msgid "Address (line 2)"
 msgstr ""
 
 #: models.py:24
-msgid "District / Neighborhood"
+msgid "Street number"
 msgstr ""
 
 #: models.py:25
-msgid "State / Province / Region"
+msgid "Floor"
 msgstr ""
 
 #: models.py:26
-msgid "Country"
+msgid "Apartment number"
 msgstr ""
 
 #: models.py:27
-msgid "Postal code"
+msgid "City / Town"
 msgstr ""
 
 #: models.py:28
-msgid "Phone number"
+msgid "District / Neighborhood"
 msgstr ""
 
 #: models.py:29
+msgid "State / Province / Region"
+msgstr ""
+
+#: models.py:30
+msgid "Country"
+msgstr ""
+
+#: models.py:31
+msgid "Postal code"
+msgstr ""
+
+#: models.py:32
+msgid "Phone number"
+msgstr ""
+
+#: models.py:33
 msgid "Security access code"
 msgstr ""
 
-#: models.py:48
+#: models.py:75
 msgid "Address"
 msgstr ""
 
-#: models.py:49
+#: models.py:76
 msgid "Addresses"
 msgstr ""
 

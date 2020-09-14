@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# Rafael Ponieman <rafa@wearetheplus.com>, 2018
+# Rafael Ponieman <rafa@theplus.agency>, 2020
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"POT-Creation-Date: 2020-09-14 13:51-0300\n"
 "PO-Revision-Date: 2018-03-16 20:37+0000\n"
-"Last-Translator: Rafael Ponieman <rafa@wearetheplus.com>, 2018\n"
+"Last-Translator: Rafael Ponieman <rafa@theplus.agency>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
 "teams/84515/es/)\n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Wagtail Commerce Products"
+msgstr "Wagtail Comerce Productos"
 
 msgid "name"
 msgstr "nombre"
@@ -44,14 +47,29 @@ msgstr ""
 "El nombre del producto como aparecería en las URLs. Ej. http://dominio.com/"
 "tienda/[marquilla-del-producto]/"
 
-msgid "single price"
-msgstr "precio único"
+msgid "regular price"
+msgstr "precio normal"
 
-msgid "same price for all variants"
-msgstr "mismo precio para todas las variantes"
+msgid "sale price"
+msgstr "precio con descuento"
 
-msgid "price"
-msgstr "precio"
+msgid ""
+"Manually set a fixed sale price. It will be the end amount charged to "
+"customers before promotions are applied."
+msgstr ""
+"Configurar manualmente un precio con descuento fijo. Va a ser el monto final "
+"que se le cobrará a los usuarios antes de que se apliquen descuentos por "
+"promociones."
+
+msgid "percentage discount"
+msgstr "porcentaje de descuento"
+
+msgid ""
+"Enter a value from 0 to 100 in order to offer a percentage discount on this "
+"product."
+msgstr ""
+"Ingresa un valor de 0 a 100 para ofrecer un porcentaje de descuento en este "
+"producto."
 
 msgid "identifier"
 msgstr "identificador"
@@ -74,6 +92,19 @@ msgstr "disponible desde"
 msgid "featured"
 msgstr "destacado"
 
+msgid "page title"
+msgstr "título de la página"
+
+msgid ""
+"Optional. 'Search Engine Friendly' title. This will appear at the top of the "
+"browser window."
+msgstr ""
+"Opcional. Título \"Amigable con Buscadores\". Aparecerá en la parte superior "
+"de la ventana del navegador."
+
+msgid "search description"
+msgstr "descripción de búsqueda"
+
 msgid "content type"
 msgstr "tipo de contenido"
 
@@ -82,6 +113,9 @@ msgstr "creado"
 
 msgid "modified on"
 msgstr "modificado"
+
+msgid "Please enter either a sale price or a percentage discount"
+msgstr "Por favor ingresa un precio con descuento o un porcentaje de descuento"
 
 msgid "Your child Product model must implement the url() method"
 msgstr "Tu modelo de producto hijo debe implementar el método url()"
@@ -100,6 +134,9 @@ msgstr "imagen"
 
 msgid "SKU"
 msgstr "SKU"
+
+msgid "price"
+msgstr "precio"
 
 msgid "weight"
 msgstr "peso"

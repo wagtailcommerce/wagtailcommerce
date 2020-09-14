@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# Rafael Ponieman <rafa@wearetheplus.com>, 2018
+# Rafael Ponieman <rafa@theplus.agency>, 2020
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-12 05:10-0300\n"
+"POT-Creation-Date: 2020-09-14 13:51-0300\n"
 "PO-Revision-Date: 2018-03-16 20:38+0000\n"
-"Last-Translator: Rafael Ponieman <rafa@wearetheplus.com>, 2018\n"
+"Last-Translator: Rafael Ponieman <rafa@theplus.agency>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
 "teams/84515/es/)\n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Wagtail Commerce Promotions"
+msgstr "Wagtail Commerce Promociones"
 
 msgid "Discount on order total"
 msgstr "Descuento en total del pedido"
@@ -66,6 +69,9 @@ msgstr "válido desde"
 
 msgid "valid until"
 msgstr "válido hasta"
+
+msgid "Only apply to products in selected categories"
+msgstr "Sólo aplica a productos en las categorías seleccionadas"
 
 msgid "auto generated"
 msgstr "auto generado"

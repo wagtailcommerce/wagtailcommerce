@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# Rafael Ponieman <rafa@wearetheplus.com>, 2018
+# Rafael Ponieman <rafa@theplus.agency>, 2020
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-10 22:17-0300\n"
+"POT-Creation-Date: 2020-09-14 13:51-0300\n"
 "PO-Revision-Date: 2018-03-16 20:38+0000\n"
-"Last-Translator: Rafael Ponieman <rafa@wearetheplus.com>, 2018\n"
+"Last-Translator: Rafael Ponieman <rafa@theplus.agency>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
 "teams/84515/es/)\n"
 "MIME-Version: 1.0\n"
@@ -22,11 +22,80 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgid "Wagtail Commerce Shipping"
+msgstr "Wagtail Commerce Envíos"
+
+msgid "title"
+msgstr "título"
+
+msgid "display title"
+msgstr "título para mostrar"
+
+msgid "Displayed on frontends instead of the title field"
+msgstr "Se mostrará públicamente en vez del campo título"
+
+msgid "description"
+msgstr "descripción"
+
+msgid "free shipping above amount"
+msgstr "envío gratis a partir del monto"
+
+msgid "If the cart total is above this amount, shipping will be free"
+msgstr ""
+"Si el total del carrito está por sobre este monto, el envío será gratuito"
+
+msgid "enabled"
+msgstr "habilitado"
+
+msgid "enabled for administrators"
+msgstr "habilitado para administradores"
+
+msgid ""
+"It will be available for admin users even if it's not enabled for the "
+"general public"
+msgstr ""
+"Estará disponible para usuarios administrativos aunque no lo esté para el "
+"público en general"
+
+msgid "sort order"
+msgstr "orden"
+
+msgid ""
+"Shipping methods with a higher sort order will appear closer to the end on "
+"listings"
+msgstr ""
+"Los medios de envío con un orden más alto aparecerán más cerca del final en "
+"los listados"
+
 msgid "content type"
 msgstr "tipo de contenido"
 
+msgid "shipping regions"
+msgstr "regiones de envío"
+
+msgid "Country"
+msgstr "País"
+
+msgid "postal codes"
+msgstr "Códigos postales"
+
+msgid ""
+"Enter postal codes separated by commas, e.g. \"3547,7894,45 545,as 51 d\""
+msgstr ""
+"Ingresa códigos postales separados por comas. Ejemplo: \"3547,7894,45 545,as "
+"51 d\""
+
+msgid "shipping region"
+msgstr "región de envío"
+
 msgid "tracking code"
 msgstr "código de rastreo"
+
+msgid "tracking link"
+msgstr "link de tracking"
+
+msgid "shipping label"
+msgstr "etiqueta de envío"
 
 msgid "created on"
 msgstr "creado"
@@ -37,5 +106,32 @@ msgstr "envío"
 msgid "shipments"
 msgstr "envíos"
 
+msgid "generate shipping label"
+msgstr "generar etiqueta de envío"
+
+msgid "label logo"
+msgstr "logo de etiqueta"
+
+msgid "label heading"
+msgstr "encabezado de etiqueta"
+
 msgid "Address not found"
 msgstr "Dirección no encontrada"
+
+msgid "Order"
+msgstr "Pedido"
+
+msgid "Ship to"
+msgstr "Enviar a"
+
+msgid "Address"
+msgstr "Dirección"
+
+msgid "Floor"
+msgstr "Piso"
+
+msgid "Apartment number"
+msgstr "Departamento"
+
+msgid "Phone"
+msgstr "Teléfono"

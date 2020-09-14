@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-29 02:53-0300\n"
+"POT-Creation-Date: 2020-09-14 13:51-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps.py:8
+msgid "Wagtail Commerce Carts"
+msgstr ""
 
 #: models.py:75
 msgctxt "Cart status"
@@ -59,31 +63,31 @@ msgstr ""
 msgid "updated on"
 msgstr ""
 
-#: models.py:93 models.py:196
+#: models.py:93 models.py:197
 msgid "created on"
 msgstr ""
 
-#: models.py:185
+#: models.py:186
 msgid "cart"
 msgstr ""
 
-#: models.py:186
+#: models.py:187
 msgid "carts"
 msgstr ""
 
-#: models.py:192
+#: models.py:193
 msgid "product"
 msgstr ""
 
-#: models.py:194
+#: models.py:195
 msgid "quantity"
 msgstr ""
 
-#: models.py:247
+#: models.py:257
 msgid "cart line"
 msgstr ""
 
-#: models.py:248
+#: models.py:258
 msgid "cart lines"
 msgstr ""
 
@@ -95,8 +99,12 @@ msgstr ""
 msgid "No more products available for the selected size."
 msgstr ""
 
-#: schema.py:31
+#: schema.py:34
 msgid "Address not found"
+msgstr ""
+
+#: schema.py:36
+msgid "Shipping method not found"
 msgstr ""
 
 #: utils.py:231 utils.py:239

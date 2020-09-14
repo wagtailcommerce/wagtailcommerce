@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-29 02:53-0300\n"
+"POT-Creation-Date: 2020-09-14 13:51-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,26 +18,143 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: models.py:75 models.py:163
+#: apps.py:8
+msgid "Wagtail Commerce Shipping"
+msgstr ""
+
+#: models.py:100
+msgid "title"
+msgstr ""
+
+#: models.py:102
+msgid "display title"
+msgstr ""
+
+#: models.py:103
+msgid "Displayed on frontends instead of the title field"
+msgstr ""
+
+#: models.py:104
+msgid "description"
+msgstr ""
+
+#: models.py:106
+msgid "free shipping above amount"
+msgstr ""
+
+#: models.py:107
+msgid "If the cart total is above this amount, shipping will be free"
+msgstr ""
+
+#: models.py:109
+msgid "enabled"
+msgstr ""
+
+#: models.py:111
+msgid "enabled for administrators"
+msgstr ""
+
+#: models.py:112
+msgid ""
+"It will be available for admin users even if it's not enabled for the "
+"general public"
+msgstr ""
+
+#: models.py:116
+msgid "sort order"
+msgstr ""
+
+#: models.py:117
+msgid ""
+"Shipping methods with a higher sort order will appear closer to the end on "
+"listings"
+msgstr ""
+
+#: models.py:122 models.py:277
 msgid "content type"
 msgstr ""
 
-#: models.py:159
+#: models.py:136 models.py:238
+msgid "shipping regions"
+msgstr ""
+
+#: models.py:230
+msgid "Country"
+msgstr ""
+
+#: models.py:232
+msgid "postal codes"
+msgstr ""
+
+#: models.py:233
+msgid ""
+"Enter postal codes separated by commas, e.g. \"3547,7894,45 545,as 51 d\""
+msgstr ""
+
+#: models.py:237
+msgid "shipping region"
+msgstr ""
+
+#: models.py:271
 msgid "tracking code"
 msgstr ""
 
-#: models.py:168
+#: models.py:272
+msgid "tracking link"
+msgstr ""
+
+#: models.py:273
+msgid "shipping label"
+msgstr ""
+
+#: models.py:282
 msgid "created on"
 msgstr ""
 
-#: models.py:203
+#: models.py:319
 msgid "shipment"
 msgstr ""
 
-#: models.py:204
+#: models.py:320
 msgid "shipments"
 msgstr ""
 
-#: schema.py:22
+#: models.py:324
+msgid "generate shipping label"
+msgstr ""
+
+#: models.py:327
+msgid "label logo"
+msgstr ""
+
+#: models.py:332
+msgid "label heading"
+msgstr ""
+
+#: schema.py:27 schema.py:39
 msgid "Address not found"
+msgstr ""
+
+#: templates/shipping/standard_shipping_label.html:88
+msgid "Order"
+msgstr ""
+
+#: templates/shipping/standard_shipping_label.html:107
+msgid "Ship to"
+msgstr ""
+
+#: templates/shipping/standard_shipping_label.html:117
+msgid "Address"
+msgstr ""
+
+#: templates/shipping/standard_shipping_label.html:129
+msgid "Floor"
+msgstr ""
+
+#: templates/shipping/standard_shipping_label.html:134
+msgid "Apartment number"
+msgstr ""
+
+#: templates/shipping/standard_shipping_label.html:146
+msgid "Phone"
 msgstr ""
