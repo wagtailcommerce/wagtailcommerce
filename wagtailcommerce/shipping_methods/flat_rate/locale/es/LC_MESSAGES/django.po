@@ -41,4 +41,4 @@ msgid "flat rate shipment"
 msgstr "envío de costo fijo"
 
 msgid "Flat rate shipping"
-msgstr "Envío de costo fijo"
+msgstr "Envíos de costo fijo"
