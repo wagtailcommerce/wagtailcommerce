@@ -43,3 +43,8 @@ source_file = wagtailcommerce/stores/locale/en.po
 source_lang = en
 type = PO
 
+[wagtail-commerce.flat-rate-shipping-method]
+file_filter = wagtailcommerce/shipping_methods/flat_rate/locale/<lang>/LC_MESSAGES/django.po
+source_file = wagtailcommerce/shipping_methods/flat_rate/locale/en.po
+source_lang = en
+type = PO

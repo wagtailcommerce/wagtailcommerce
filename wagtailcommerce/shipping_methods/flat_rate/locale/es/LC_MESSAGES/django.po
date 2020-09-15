@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-14 13:51-0300\n"
-"PO-Revision-Date: 2018-03-16 20:38+0000\n"
+"POT-Creation-Date: 2020-09-14 22:37-0300\n"
+"PO-Revision-Date: 2020-09-15 01:40+0000\n"
 "Last-Translator: Rafael Ponieman <rafa@theplus.agency>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
 "teams/84515/es/)\n"
@@ -22,38 +22,23 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Wagtail Commerce Stores"
-msgstr "Wagtail Commerce Tiendas"
+msgid "Flat rate shipping method"
+msgstr "Medio de envío de costo fijo"
 
-msgid "name"
-msgstr "nombre"
+msgid "shipping rate"
+msgstr "costo de envío"
 
-msgid "code"
-msgstr "código"
+msgid "flat rate shipping method"
+msgstr "medio de envío de costo fijo"
 
-msgid "ISO 4217 3 letter code"
-msgstr "Código ISO 4217 de 3 letras"
+msgid "flat rate shipping methods"
+msgstr "medios de envío de costo fijo"
 
-msgid "symbol"
-msgstr "símbolo"
+msgid "Shipping rate at the moment the shipment was generated"
+msgstr "Costo de envío al momento de la generación del envío"
 
-msgid "As displayed on frontend"
-msgstr "Como se muestra en web"
+msgid "flat rate shipment"
+msgstr "envío de costo fijo"
 
-msgid "currency"
-msgstr "moneda"
-
-msgid "currencies"
-msgstr "monedas"
-
-msgid "checkout enabled"
-msgstr "compra habilitada"
-
-msgid "tax rate (percentage)"
-msgstr "tasa de impuesto (porcentaje)"
-
-msgid "store"
-msgstr "tienda"
-
-msgid "stores"
-msgstr "tiendas"
+msgid "Flat rate shipping"
+msgstr "Envío de costo fijo"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-14 22:25-0300\n"
+"POT-Creation-Date: 2020-09-14 22:37-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,51 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: apps.py:8
-msgid "Wagtail Commerce Stores"
+#: flat_rate/apps.py:8
+msgid "Flat rate shipping method"
 msgstr ""
 
-#: models.py:9 models.py:28
-msgid "name"
+#: flat_rate/models.py:14 flat_rate/models.py:49
+msgid "shipping rate"
 msgstr ""
 
-#: models.py:10
-msgid "code"
+#: flat_rate/models.py:43
+msgid "flat rate shipping method"
 msgstr ""
 
-#: models.py:10
-msgid "ISO 4217 3 letter code"
+#: flat_rate/models.py:44
+msgid "flat rate shipping methods"
 msgstr ""
 
-#: models.py:11
-msgid "symbol"
+#: flat_rate/models.py:50
+msgid "Shipping rate at the moment the shipment was generated"
 msgstr ""
 
-#: models.py:11
-msgid "As displayed on frontend"
+#: flat_rate/models.py:53
+msgid "flat rate shipment"
 msgstr ""
 
-#: models.py:23
-msgid "currency"
-msgstr ""
-
-#: models.py:24
-msgid "currencies"
-msgstr ""
-
-#: models.py:32
-msgid "checkout enabled"
-msgstr ""
-
-#: models.py:35
-msgid "tax rate (percentage)"
-msgstr ""
-
-#: models.py:53
-msgid "store"
-msgstr ""
-
-#: models.py:54
-msgid "stores"
+#: flat_rate/wagtail_hooks.py:9
+msgid "Flat rate shipping"
 msgstr ""
