@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-14 22:37-0300\n"
+"POT-Creation-Date: 2020-10-01 17:24-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,30 +17,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: flat_rate/apps.py:8
+
+#: apps.py:8
 msgid "Flat rate shipping method"
 msgstr ""
 
-#: flat_rate/models.py:14 flat_rate/models.py:49
+#: models.py:14 models.py:49
 msgid "shipping rate"
 msgstr ""
 
-#: flat_rate/models.py:43
+#: models.py:43
 msgid "flat rate shipping method"
 msgstr ""
 
-#: flat_rate/models.py:44
+#: models.py:44
 msgid "flat rate shipping methods"
 msgstr ""
 
-#: flat_rate/models.py:50
+#: models.py:50
 msgid "Shipping rate at the moment the shipment was generated"
 msgstr ""
 
-#: flat_rate/models.py:53
+#: models.py:53
 msgid "flat rate shipment"
 msgstr ""
 
-#: flat_rate/wagtail_hooks.py:9
+#: wagtail_hooks.py:9
 msgid "Flat rate shipping"
 msgstr ""

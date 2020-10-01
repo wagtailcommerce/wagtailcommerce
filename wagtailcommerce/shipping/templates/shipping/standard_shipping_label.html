@@ -5,6 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
+    <title>{% trans "Order" %} {{ order.identifier }}</title>
     <style type="text/css">
       body {
         font-family: {{ font_family|default:"\"Open Sans\", sans-serif" }};
@@ -68,9 +69,35 @@
       p {
         margin: 0;
       }
+      .product-table {
+        text-align: left;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .product-table th, .product-table td {
+        padding: 5px;
+        border-color: #333;
+        border-style: solid;
+      }
+      .product-table th {
+        border-width: 0 1px 1px 1px;
+      }
+      .product-table td {
+        border-width: 1px;
+        font-size: 11px;
+        vertical-align: top;
+      }
+      .product-table th:first-child, .product-table td:first-child {
+        border-left-width: 0;
+      }
+      .product-table th:last-child, .product-table td:last-child {
+        border-right-width: 0;
+      }
+      .product-table tbody tr:last-child td {
+        border-bottom-width: 0;
+      }
     </style>
   </head>
-
   <body>
     <div class="label-container">
       <div class="label-heading">
@@ -100,7 +127,7 @@
           </div>
         </div>
       </div>
-    {% endif %}
+      {% endif %}
       <div class="label-content">
         <div class="label-field">
           <div class="field-heading">
@@ -150,6 +177,42 @@
           </div>
         </div>
       </div>
+      {% if shipping_method.label_display_product_list %}
+        <div class="label-content">
+          <div class="label-field">
+            <div class="field-heading">
+              {% trans "Products" %}
+            </div>
+            <table class="product-table" cellspacing="0" cellpadding="0">
+              <thead>
+                <tr>
+                  <th>{% trans "SKU" %}</th><th>{% trans "Name" %}</th><th>{% trans "Details" %}</th><th>{% trans "Qty" %}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for line in order.lines.all %}
+                  <tr>
+                    {% with variant=line.product_variant.specific %}
+                      <td class="product-sku">
+                        {{ line.sku }}
+                      </td>
+                      <td class="product-name">
+                        {{ line.product_name }}
+                      </td>
+                      <td class="product-details">
+                        {{ variant.get_details_description }}
+                      </td>
+                      <td class="product-quantity">
+                        {{ line.quantity }}
+                      </td>
+                    {% endwith %}
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      {% endif %}
     </div>
   </body>
 </html>

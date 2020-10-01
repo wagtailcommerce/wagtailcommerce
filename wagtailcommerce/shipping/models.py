@@ -330,11 +330,13 @@ class WithStandardLabelGeneration(models.Model):
         related_name='wagtailcommerce_images'
     )
     label_heading = RichTextField(verbose_name=_('label heading'))
+    label_display_product_list = models.BooleanField(_('display product list on label'), default=True)
 
     panels = [
         FieldPanel('generate_shipping_label'),
         ImageChooserPanel('label_logo'),
         FieldPanel('label_heading'),
+        FieldPanel('label_display_product_list'),
     ]
 
     class Meta:

@@ -26,9 +26,36 @@ urlpatterns = [
                         'district': 'District',
                         'get_country_area': 'Country Area',
                         'country': 'Country'
+                    },
+                    'lines': {
+                        'all': [
+                            {
+                                'sku': '0255895829385935',
+                                'product_name': 'Test product 1',
+                                'product_variant': {
+                                    'specific': {
+                                        'product_name': 'Test product',
+                                        'get_details_description': 'Size: S / Color: Red'
+                                    }
+                                },
+                                'quantity': 2
+                            },
+                            {
+                                'sku': '6548468784546848',
+                                'product_name': 'Test product 2',
+                                'product_variant': {
+                                    'specific': {
+                                        'product_name': 'Test product',
+                                        'get_details_description': 'Size: M / Color: Deep Blue'
+                                    }
+                                },
+                                'quantity': 3
+                            }
+                        ]
                     }
                 },
                 'shipping_method': {
+                    'label_display_product_list': True,
                     'label_heading': '<p>Shipping method <i>label heading</i></p>'
                 },
                 'test_logo': settings.STATIC_URL + 'img/simple_shipping_label_test_logo.png',

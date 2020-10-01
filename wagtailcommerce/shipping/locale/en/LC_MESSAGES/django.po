@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-14 13:51-0300\n"
+"POT-Creation-Date: 2020-10-01 17:24-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -131,30 +131,55 @@ msgstr ""
 msgid "label heading"
 msgstr ""
 
+#: models.py:333
+msgid "display product list on label"
+msgstr ""
+
 #: schema.py:27 schema.py:39
 msgid "Address not found"
 msgstr ""
 
-#: templates/shipping/standard_shipping_label.html:88
+#: templates/shipping/standard_shipping_label.html:8
+#: templates/shipping/standard_shipping_label.html:115
 msgid "Order"
 msgstr ""
 
-#: templates/shipping/standard_shipping_label.html:107
+#: templates/shipping/standard_shipping_label.html:134
 msgid "Ship to"
 msgstr ""
 
-#: templates/shipping/standard_shipping_label.html:117
+#: templates/shipping/standard_shipping_label.html:144
 msgid "Address"
 msgstr ""
 
-#: templates/shipping/standard_shipping_label.html:129
+#: templates/shipping/standard_shipping_label.html:156
 msgid "Floor"
 msgstr ""
 
-#: templates/shipping/standard_shipping_label.html:134
+#: templates/shipping/standard_shipping_label.html:161
 msgid "Apartment number"
 msgstr ""
 
-#: templates/shipping/standard_shipping_label.html:146
+#: templates/shipping/standard_shipping_label.html:173
 msgid "Phone"
+msgstr ""
+
+#: templates/shipping/standard_shipping_label.html:184
+msgid "Products"
+msgstr ""
+
+#: templates/shipping/standard_shipping_label.html:189
+msgid "SKU"
+msgstr ""
+
+#: templates/shipping/standard_shipping_label.html:189
+msgid "Name"
+msgstr ""
+
+#: templates/shipping/standard_shipping_label.html:189
+msgid "Details"
+msgstr ""
+
+#: templates/shipping/standard_shipping_label.html:189
+msgid "Qty"
 msgstr ""
