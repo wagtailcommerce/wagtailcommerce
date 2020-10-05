@@ -67,7 +67,7 @@ def create_order(request, shipping_address, billing_address, shipping_method, ca
             item_unit_regular_price=line.get_item_unit_regular_price(),
             item_unit_sale_price=line.get_item_unit_sale_price(),
             item_percentage_discount=product.percentage_discount,
-            item_unit_promotions_discount=line.get_item_unit_price_with_promotions_discount(),
+            item_unit_promotions_discount=line.get_item_unit_promotions_discount(),
             item_unit_price_with_promotions_discount=line.get_item_unit_price_with_promotions_discount(),
             line_total=line.get_total(),
             product_name=product.name,
