@@ -56,6 +56,7 @@ def create_order(request, shipping_address, billing_address, shipping_method, ca
 
     for line in cart.lines.select_related('variant', 'variant__product').all():
         variant = line.variant.specific
+        product = variant.product
 
         order_line = OrderLine(
             order=order,
@@ -65,10 +66,11 @@ def create_order(request, shipping_address, billing_address, shipping_method, ca
             item_unit_price=line.get_item_unit_price(),
             item_unit_regular_price=line.get_item_unit_regular_price(),
             item_unit_sale_price=line.get_item_unit_sale_price(),
+            item_percentage_discount=product.percentage_discount,
             item_unit_promotions_discount=line.get_item_unit_price_with_promotions_discount(),
             item_unit_price_with_promotions_discount=line.get_item_unit_price_with_promotions_discount(),
             line_total=line.get_total(),
-            product_name=variant.product.name,
+            product_name=product.name,
             product_variant_description=variant.__str__(),
             product_details=variant.get_details(),
             weight=variant.weight,

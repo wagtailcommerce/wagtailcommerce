@@ -22,15 +22,19 @@ class ReadOnlyPanel(EditHandler):
     def render(self):
         value = getattr(self.instance, self.attr)
         if callable(value):
-            value = value()
-        return format_html('<div style="padding-top: 1.2em;">{}</div>', linebreaksbr(value))
+            value = linebreaksbr(value())
+
+        if value is None:
+            value = ''
+
+        return format_html('<div style="padding-top: 1.2em;">{}</div>', value)
 
     def render_as_object(self):
         return format_html(
             '<fieldset><legend>{}</legend>'
             '<ul class="fields"><li><div class="field">{}</div></li></ul>'
             '</fieldset>',
-            self.heading, self.render())
+            self.heading.capitalize(), self.render())
 
     def render_as_field(self):
         return format_html(
@@ -38,4 +42,4 @@ class ReadOnlyPanel(EditHandler):
             '<label>{}{}</label>'
             '<div class="field-content">{}</div>'
             '</div>',
-            self.heading, _(':'), self.render())
+            self.heading.capitalize(), _(':'), self.render())

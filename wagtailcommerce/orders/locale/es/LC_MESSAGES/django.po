@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-14 13:51-0300\n"
+"POT-Creation-Date: 2020-10-04 23:40-0300\n"
 "PO-Revision-Date: 2018-03-16 20:25+0000\n"
 "Last-Translator: Rafael Ponieman <rafa@theplus.agency>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/wagtail-commerce/"
@@ -185,22 +185,22 @@ msgid "quantity"
 msgstr "cantidad"
 
 msgid "item unit price"
-msgstr "precio unitario del ítem"
+msgstr "precio unitario"
 
 msgid "item unit regular price"
-msgstr "precio unitario normal del ítem"
+msgstr "precio unitario normal"
 
 msgid "item unit sale price"
-msgstr "precio unitario del ítem con descuento"
+msgstr "precio unitario con descuento"
 
 msgid "item percentage discount"
 msgstr "porcentaje de descuento del ítem"
 
 msgid "total discounted from each unit based on promotions"
-msgstr "total descontado de cada unidad basado en promociones"
+msgstr "descuento por unidad basado en promociones"
 
 msgid "item price with promotions discount"
-msgstr "previo del ítem con descuentos por promociones"
+msgstr "precio unitario con descuentos por promociones"
 
 msgid "total"
 msgstr "total"
@@ -235,11 +235,14 @@ msgstr "Variante"
 msgid "Quantity"
 msgstr "Cantidad"
 
-msgid "Item price"
-msgstr "Precio de ítem"
+msgid "Unit price"
+msgstr "Precio unitario"
 
-msgid "Item discount"
-msgstr "Descuento del ítem"
+msgid "Unit regular price"
+msgstr "Precio unitario normal"
+
+msgid "Unit sale price"
+msgstr "Precio unitario con descuento"
 
 msgid "order line"
 msgstr "línea del pedido"

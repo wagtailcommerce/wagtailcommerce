@@ -12,7 +12,7 @@ from wagtail.admin.edit_handlers import (
     FieldPanel, FieldRowPanel, InlinePanel, MultiFieldPanel, ObjectList,
     TabbedInterface)
 
-from wagtailcommerce.orders.signals import order_paid_signal
+from wagtailcommerce.orders.signals import order_paid_signal, order_shipment_generation_failure_signal
 from wagtailcommerce.promotions.models import Coupon
 from wagtailcommerce.utils.edit_handlers import ReadOnlyPanel
 
@@ -116,7 +116,7 @@ class Order(ClusterableModel):
                     ReadOnlyPanel('product_tax', heading=_('Product tax')),
                 ]),
                 FieldRowPanel([
-                    ReadOnlyPanel('total', heading=_('Total')),
+                    ReadOnlyPanel('total_inc_tax', heading=_('Total')),
                 ]),
             ], heading=_('Totals'))
         ], heading=_('Basic info')),
@@ -193,17 +193,17 @@ class OrderLine(models.Model):
     product_variant = models.ForeignKey('wagtailcommerce_products.ProductVariant', related_name='lines',
                                         null=True, blank=True, on_delete=models.SET_NULL)
     quantity = models.PositiveIntegerField(_('quantity'), default=1)
-    item_unit_price = models.DecimalField(_('item unit price'), decimal_places=2, max_digits=12)
-    item_unit_regular_price = models.DecimalField(_('item unit regular price'), decimal_places=2, max_digits=12)
+    item_unit_price = models.DecimalField(_('unit price'), decimal_places=2, max_digits=12)
+    item_unit_regular_price = models.DecimalField(_('unit regular price'), decimal_places=2, max_digits=12)
     item_unit_sale_price = models.DecimalField(
-        _('item unit sale price'), decimal_places=2, max_digits=12, blank=True, null=True)
+        _('unit sale price'), decimal_places=2, max_digits=12, blank=True, null=True)
     item_percentage_discount = models.DecimalField(
-        _('item percentage discount'), decimal_places=2, max_digits=12, blank=True, null=True)
+        _('percentage discount'), decimal_places=2, max_digits=12, blank=True, null=True)
     item_unit_promotions_discount = models.DecimalField(
-        _('total discounted from each unit based on promotions'), decimal_places=2, max_digits=12)
+        _('per unit discount unit based on promotions'), decimal_places=2, max_digits=12)
     item_unit_price_with_promotions_discount = models.DecimalField(
-        _('item price with promotions discount'), decimal_places=2, max_digits=12)
-    line_total = models.DecimalField(_('total'), decimal_places=2, max_digits=12)
+        _('unit price with promotions discount'), decimal_places=2, max_digits=12)
+    line_total = models.DecimalField(_('subtotal'), decimal_places=2, max_digits=12)
 
     # Persistent fields. If the linked Product Variant is deleted, the SKU, product name and variant desc. persist.
     product_name = models.CharField(_('product name'), max_length=255)
@@ -224,14 +224,24 @@ class OrderLine(models.Model):
             ReadOnlyPanel('product_variant_description', _('Variant'))
         ]),
         FieldRowPanel([
-            ReadOnlyPanel('quantity', heading=_('Quantity')),
-            ReadOnlyPanel('item_price', _('Item price')),
+            ReadOnlyPanel('quantity', heading=_('quantity')),
+            ReadOnlyPanel('item_unit_price', _('unit price')),
         ]),
         FieldRowPanel([
-            ReadOnlyPanel('quantity', heading=_('Quantity')),
-            ReadOnlyPanel('item_discount', _('Item discount')),
-            ReadOnlyPanel('line_total', _('Subtotal'))
+            ReadOnlyPanel('item_unit_regular_price', _('unit regular price')),
+            ReadOnlyPanel('item_unit_sale_price', _('unit sale price')),
         ]),
+        FieldRowPanel([
+            ReadOnlyPanel('item_percentage_discount', _('percentage discount')),
+        ]),
+        FieldRowPanel([
+            ReadOnlyPanel('item_unit_promotions_discount', _('per unit discount unit based on promotions')),
+            ReadOnlyPanel('item_unit_price_with_promotions_discount', _('unit price with promotions discount')),
+        ]),
+        FieldRowPanel([
+            ReadOnlyPanel('quantity', heading=_('quantity')),
+            ReadOnlyPanel('line_total', _('subtotal'))
+        ])
     ]
 
     def __str__(self):

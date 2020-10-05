@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-14 13:51-0300\n"
+"POT-Creation-Date: 2020-10-05 00:17-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -182,7 +182,7 @@ msgstr ""
 msgid "Shipping cost total"
 msgstr ""
 
-#: models.py:114 models.py:233
+#: models.py:114
 msgid "Subtotal"
 msgstr ""
 
@@ -230,36 +230,36 @@ msgstr ""
 msgid "product thumbnail"
 msgstr ""
 
-#: models.py:195
+#: models.py:195 models.py:227 models.py:242
 msgid "quantity"
 msgstr ""
 
-#: models.py:196
-msgid "item unit price"
+#: models.py:196 models.py:228
+msgid "unit price"
 msgstr ""
 
-#: models.py:197
-msgid "item unit regular price"
+#: models.py:197 models.py:231
+msgid "unit regular price"
 msgstr ""
 
-#: models.py:199
-msgid "item unit sale price"
+#: models.py:199 models.py:232
+msgid "unit sale price"
 msgstr ""
 
-#: models.py:201
-msgid "item percentage discount"
+#: models.py:201 models.py:235
+msgid "percentage discount"
 msgstr ""
 
-#: models.py:203
-msgid "total discounted from each unit based on promotions"
+#: models.py:203 models.py:238
+msgid "per unit discount unit based on promotions"
 msgstr ""
 
-#: models.py:205
-msgid "item price with promotions discount"
+#: models.py:205 models.py:239
+msgid "unit price with promotions discount"
 msgstr ""
 
-#: models.py:206
-msgid "total"
+#: models.py:206 models.py:243
+msgid "subtotal"
 msgstr ""
 
 #: models.py:209
@@ -298,23 +298,11 @@ msgstr ""
 msgid "Variant"
 msgstr ""
 
-#: models.py:227 models.py:231
-msgid "Quantity"
-msgstr ""
-
-#: models.py:228
-msgid "Item price"
-msgstr ""
-
-#: models.py:232
-msgid "Item discount"
-msgstr ""
-
-#: models.py:269
+#: models.py:279
 msgid "order line"
 msgstr ""
 
-#: models.py:270
+#: models.py:280
 msgid "order lines"
 msgstr ""
 
