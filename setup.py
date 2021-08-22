@@ -22,9 +22,9 @@ except ImportError:
 
 install_requires = [
     'Wagtail>=2.14,<2.15',
-    'django-countries>=4.6,<5.0',
+    'django-countries>=7.2.1,<7.3',
     'shortuuid>=0.5,<0.6',
-    'beautifulsoup4>=4.8,<4.10',
+    'beautifulsoup4>=4g8,<4.10',
     'graphene-django>=2.0,<3.0',
     'weasyprint>=51',
     'django-weasyprint>=1.0.1'
